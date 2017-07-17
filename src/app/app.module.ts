@@ -14,8 +14,11 @@ import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
 
 const appRoutes: Routes = [
+  { path: '', component: AboutComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'contact', component: ContactComponent }
+  { path: 'contact', component: ContactComponent },
+  { path: 'projects', component: ProjectsComponent },
+  { path: 'skills-tools', component: SkillsComponent }
 ];
 
 @NgModule({

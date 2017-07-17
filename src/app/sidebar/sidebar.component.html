@@ -1,18 +1,61 @@
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="row">
 
-    <nav class="nav flex-column col-2 colx text-center">
+  <div class="green offset-2 col-lg-12">
 
-        <a class="navbar-brand">Kevin Oglesby</a>
-        <a class="nav-link" routerLink="/about">About</a>
-        <a class="nav-link" href="#">Projects</a>
-        <a class="nav-link" href="#">Skills and Tools</a>
-        <a class="nav-link" routerLink="/contact">Contact</a>
-    </nav>
+    <!--<input type="button" (click)="onGrowDiv()" value="Read more" id="more-button">-->
 
-  <div class="col-10 green">
+    <!--<div id='glow'>-->
+      <!--<div class='measuringWrapper'>-->
+        <!--<div class="text">Here is some more text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae urna nulla. Vivamus a purus mi. In hac habitasse platea dictumst. In ac tempor quam. Vestibulum eleifend vehicula ligula, et cursus nisl gravida sit amet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</div>-->
+      <!--</div>-->
+    <!--</div>-->
     <router-outlet></router-outlet>
   </div>
 
+</div>
+<div class="nav-side-menu">
+  <div class="brand">Kevin Oglesby</div>
+  <div class="menu-list">
+    <ul id="menu-content" class="menu-content">
+      <!--<li>-->
+        <!--<a class="navbar-brand" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">-->
+          <!--Kevin Oglesby-->
+        <!--</a>-->
+      <!--</li>-->
+      <li>
+        <a class="nav-link" routerLink="/about" routerLinkActive="active">
+          About
+        </a>
+      </li>
+      <li >
+        <a (click)="onGrowDiv()" value="Read more" id="more-button" class="nav-link" routerLink="/projects"  routerLinkActive="active">Projects
+          <span class="arrow"></span>
+        </a>
+      </li>
+      <div id="grow">
+        <div class="measuringWrapper">
+          <ul>
+            <li><a>Agile Team Project</a></li>
+            <li><a>Quote Generator</a></li>
+            <li><a>Online Marketplace</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <li>
+        <a class="nav-link" routerLink="/skills-tools" routerLinkActive="active">
+          Skills and Tools
+        </a>
+      </li>
+      <li>
+        <a class="nav-link" routerLink="/contact" routerLinkActive="active">
+          Contact
+        </a>
+      </li>
+
+    </ul>
+  </div>
 </div>
 
 
