@@ -6,23 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
-  public isCollapsed = false;
+  // public isCollapsed = false;
   constructor() { }
 
   ngOnInit() {
   }
 
   onGrowDiv() {
-    var growDiv = document.getElementById('grow');
-    console.log(document.getElementById('grow'));
-    console.log(growDiv.clientHeight);
-    console.log(growDiv.style);
-    if (growDiv.clientHeight) {
-      growDiv.style.height = '0';
-    } else {
-      var wrapper = document.querySelector('.measuringWrapper');
-      growDiv.style.height = wrapper.clientHeight + "px";
-    }
+    // var growDiv = document.getElementById('grow');
+    // console.log(document.getElementById('grow'));
+    // console.log(growDiv.clientHeight);
+    // console.log(growDiv.style);
+    // if (growDiv.clientHeight) {
+    //   growDiv.style.height = '0';
+    // } else {
+    //   var wrapper = document.querySelector('.measuringWrapper');
+    //   growDiv.style.height = wrapper.clientHeight + "px";
+    // }
   }
 
 }
