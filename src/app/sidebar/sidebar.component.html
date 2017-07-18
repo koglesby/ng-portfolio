@@ -2,6 +2,7 @@
 <div class="nav-side-menu">
   <div class="brand">Kevin Oglesby</div>
   <i class="fa fa-bars fa-2x toggle-btn" (click)="onAnimate()"></i>
+
   <div class="menu-list" id="navGrow" [@divState]="state">
     <ul id="menu-content" class="menu-content">
       <!--<li>-->
@@ -16,15 +17,13 @@
       </li>
       <li>
         <a (click)="onGrowDiv()" class="nav-link" routerLink="/projects"  routerLinkActive="active">Projects
-          <span class="{{arrow}}"></span>
+          <i class="{{arrow}}"></i>
           <!--<span class="arrow"></span>-->
         </a>
-
-
       </li>
       <div id="grow">
         <div class="measuringWrapper">
-          <ul>
+          <ul class="sub-menu">
             <li><a>Agile Team Project</a></li>
             <li><a>Quote Generator</a></li>
             <li><a>Online Marketplace</a></li>
