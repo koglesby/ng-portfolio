@@ -1,8 +1,8 @@
 
-<div class="nav-side-menu col-md-12">
+<div class="nav-side-menu">
   <div class="brand">Kevin Oglesby</div>
-  <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
-  <div class="menu-list">
+  <i class="fa fa-bars fa-2x toggle-btn" (click)="onAnimate()"></i>
+  <div class="menu-list" id="navGrow" [@divState]="state">
     <ul id="menu-content" class="menu-content">
       <!--<li>-->
         <!--<a class="navbar-brand" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">-->
@@ -14,10 +14,12 @@
           About
         </a>
       </li>
-      <li >
-        <a (click)="onGrowDiv()" value="Read more" id="more-button" class="nav-link" routerLink="/projects"  routerLinkActive="active">Projects
+      <li>
+        <a (click)="onGrowDiv()" class="nav-link" routerLink="/projects"  routerLinkActive="active">Projects
           <span class="arrow"></span>
         </a>
+
+
       </li>
       <div id="grow">
         <div class="measuringWrapper">
@@ -44,19 +46,11 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="green offset-2 col-lg-12">
+<!--<div class="row">-->
+  <!--<div class="green offset-2 col-lg-12">-->
+    <!--<router-outlet></router-outlet>-->
+  <!--</div>-->
 
-    <!--<input type="button" (click)="onGrowDiv()" value="Read more" id="more-button">-->
-
-    <!--<div id='glow'>-->
-    <!--<div class='measuringWrapper'>-->
-    <!--<div class="text">Here is some more text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae urna nulla. Vivamus a purus mi. In hac habitasse platea dictumst. In ac tempor quam. Vestibulum eleifend vehicula ligula, et cursus nisl gravida sit amet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <router-outlet></router-outlet>
-  </div>
-
-</div>
+<!--</div>-->
 
 

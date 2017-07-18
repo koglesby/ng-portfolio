@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { SidebarModule } from 'ng-sidebar';
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -12,6 +11,7 @@ import { ContactComponent } from './contact/contact.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const appRoutes: Routes = [
   { path: '', component: AboutComponent },
@@ -36,7 +36,7 @@ const appRoutes: Routes = [
     HttpModule,
     RouterModule.forRoot(appRoutes),
     NgbModule.forRoot(),
-    SidebarModule.forRoot()
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
