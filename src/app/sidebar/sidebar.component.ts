@@ -19,11 +19,20 @@ import { trigger, state, style, transition, animate, keyframes, group } from '@a
 })
 export class SidebarComponent implements OnInit {
   state = 'collapsed';
+  arrow = 'fa fa-chevron-down';
   // public isCollapsed = false;
   constructor() { }
 
   onAnimate() {
-    this.state == 'collapsed' ? this.state = 'expanded' : this.state = 'collapsed';
+    if (this.state == 'collapsed') {
+      this.state = 'expanded';
+
+    } else {
+      this.state = 'collapsed';
+
+    }
+
+
   }
 
   ngOnInit() {
@@ -43,9 +52,11 @@ export class SidebarComponent implements OnInit {
 
     if (growDiv.clientHeight) {
       growDiv.style.height = '0';
+      this.arrow = 'fa fa-chevron-down';
     } else {
       var wrapper = document.querySelector('.measuringWrapper');
       growDiv.style.height = wrapper.clientHeight + "px";
+      this.arrow = 'fa fa-chevron-up';
     }
   }
 
