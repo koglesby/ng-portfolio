@@ -13,13 +13,15 @@ import { trigger, state, style, transition, animate, keyframes, group } from '@a
       state('expanded', style({
         'height': '!'
       })),
-      transition('collapsed <=> expanded', animate('900ms ease-in-out'))
+      transition('collapsed <=> expanded', animate('300ms ease-in-out'))
     ])
   ]
 })
 export class SidebarComponent implements OnInit {
   state = 'collapsed';
   arrow = 'fa fa-chevron-down';
+
+  isActive = '';
   // public isCollapsed = false;
   constructor() { }
 
@@ -31,7 +33,7 @@ export class SidebarComponent implements OnInit {
       this.state = 'collapsed';
 
     }
-
+    this.isActive == '' ? this.isActive = 'is-active' : this.isActive = '';
 
   }
 
