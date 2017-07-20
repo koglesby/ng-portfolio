@@ -37,13 +37,19 @@
       </li>
       <div id="grow">
         <div class="measuringWrapper">
-          <ul class="sub-menu">
-            <li routerLink="/projects/agile-team" routerLinkActive="active"><a>Agile Team Project</a></li>
-            <li routerLink="/about" routerLinkActive="active"><a>Quote Generator</a></li>
-            <li routerLink="/skills-tools" routerLinkActive="active"><a>Online Marketplace</a></li>
+
+          <ul class="sub-menu" *ngFor="let proj of projects; let i = index">
+            <li routerLink="/projects/{{i}}"><a>{{proj.name}}</a></li>
+
+            <!--<li routerLink="/projects/agile-team" routerLinkActive="active"><a>Agile Team Project</a></li>-->
+            <!--<li routerLink="/projects/1" routerLinkActive="active"><a>Quote Generator</a></li>-->
+            <!--<li routerLink="/skills-tools" routerLinkActive="active"><a>Online Marketplace</a></li>-->
+            <!--<app-projects></app-projects>-->
+            <!--<app-project-list></app-project-list>-->
           </ul>
         </div>
       </div>
+
 
       <li>
         <a class="nav-link" routerLink="/skills-tools" routerLinkActive="active">

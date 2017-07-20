@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate, keyframes, group } from '@angular/animations';
+import { ProjectService } from '../projects/project.service';
+import { Project } from '../projects/project.model';
 
 @Component({
   selector: 'app-sidebar',
@@ -23,7 +25,9 @@ export class SidebarComponent implements OnInit {
 
   isActive = '';
   // public isCollapsed = false;
-  constructor() { }
+  projects: Project[];
+
+  constructor(private projectService: ProjectService) { }
 
   onAnimate() {
     if (this.state == 'collapsed') {
@@ -38,6 +42,7 @@ export class SidebarComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.projects = this.projectService.getProjects();
   }
 
   onGrowNav() {

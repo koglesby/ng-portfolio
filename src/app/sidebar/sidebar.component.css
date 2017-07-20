@@ -116,7 +116,6 @@
 
 .nav-side-menu li i {
   outline: none;
-
   position: absolute;
   right: 10px;
   top: 15px;
@@ -289,7 +288,7 @@ p, li, a{
   height: 4px;
   background-color: #ecf0f1;
   display: block;
-  margin: 6px auto;
+  margin: 10.8% auto;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -325,7 +324,7 @@ p, li, a{
 
 #hamburger-5.is-active .line:nth-child(1),
 #hamburger-5.is-active .line:nth-child(3){
-  width: 26px;
+  width: 28px;
   -webkit-transform-origin: right;
   -moz-transform-origin: right;
   -ms-transform-origin: right;

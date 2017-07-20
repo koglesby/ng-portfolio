@@ -13,13 +13,17 @@ import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AgileTeamComponent } from './projects/agile-team/agile-team.component';
+import { ProjectComponent } from './projects/project/project.component';
+import { ProjectService } from './projects/project.service';
+import { ProjectListComponent } from './sidebar/project-list/project-list.component';
 
 const appRoutes: Routes = [
   { path: '', component: AboutComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'projects', component: ProjectsComponent, children: [
-    { path: 'agile-team', component: AgileTeamComponent }
+    { path: 'agile-team', component: AgileTeamComponent },
+    { path: ':id', component: ProjectComponent }
   ] },
   { path: 'skills-tools', component: SkillsComponent }
 ];
@@ -32,7 +36,9 @@ const appRoutes: Routes = [
     ContactComponent,
     ProjectsComponent,
     SkillsComponent,
-    AgileTeamComponent
+    AgileTeamComponent,
+    ProjectComponent,
+    ProjectListComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +48,7 @@ const appRoutes: Routes = [
     NgbModule.forRoot(),
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [ProjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
