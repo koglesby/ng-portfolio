@@ -9,21 +9,24 @@ import { Params, Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./project.component.css']
 })
 export class ProjectComponent implements OnInit {
-
-  projects: Project[];
+  
   project: Project;
   id: number;
 
   constructor(private projectService: ProjectService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
-    this.projects = this.projectService.getProjects();
-
     this.route.params.subscribe(
       (params: Params) => {
         this.id = +params['id'];
         this.project = this.projectService.getProject(this.id);
       }
     );
+  }
+  
+  onNextProject() {
+    var proj= this.projectService.getNextProject(this.id);
+    console.log(proj);
+    this.router.navigate(['about']);
   }
 }

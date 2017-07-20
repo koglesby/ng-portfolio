@@ -25,4 +25,12 @@ export class ProjectService {
   getProject(index: number) {
     return this.projects[index];
   }
+  
+  getNextProject(id: number) {
+    if (this.projects[id + 1]) {
+      return this.projects[id + 1]
+    } else {
+      return this.projects[id];
+    }
+  }
 }
