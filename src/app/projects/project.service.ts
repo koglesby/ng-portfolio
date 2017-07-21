@@ -29,11 +29,12 @@ export class ProjectService {
     return this.projects[index];
   }
   
-  getNextProject(id: number) {
-    return this.projects[id + 1];
+  changeProject(id: number, direction: string) {
+    if (direction == 'forward') {
+      return (this.projects[id + 1] ? id + 1 : 0 );
+    } else {
+      return (this.projects[id - 1] ? id - 1 : this.projects.length - 1);
+    }
   }
   
-  getPrevious(id: number) {
-    return (this.projects[id - 1] ? id - 1 : this.projects.length - 1);
-  }
 }

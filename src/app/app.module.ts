@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProjectComponent } from './projects/project/project.component';
 import { ProjectService } from './projects/project.service';
 import { ProjectListComponent } from './sidebar/project-list/project-list.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
   { path: '', component: AboutComponent },
@@ -24,7 +25,9 @@ const appRoutes: Routes = [
   { path: 'projects', component: ProjectsComponent, children: [
     { path: ':id', component: ProjectComponent }
   ] },
-  { path: 'skills-tools', component: SkillsComponent }
+  { path: 'skills-tools', component: SkillsComponent },
+  { path: 'not-found', component: PageNotFoundComponent },
+  { path: '**', redirectTo: '/not-found'}
 ];
 
 @NgModule({
@@ -36,7 +39,8 @@ const appRoutes: Routes = [
     ProjectsComponent,
     SkillsComponent,
     ProjectComponent,
-    ProjectListComponent
+    ProjectListComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

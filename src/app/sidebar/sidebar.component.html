@@ -2,7 +2,7 @@
 <div class="nav-side-menu">
   <div class="brand" ><a routerLink="/about">Kevin Oglesby</a></div>
 
-    <div class="three col toggle-btn container" (click)="onAnimate()">
+    <div class="toggle-btn container" (click)="onAnimate()">
       <div class="hamburger {{isActive}}" id="hamburger-5">
         <span class="line"></span>
         <span class="line"></span>
@@ -18,10 +18,10 @@
           About
         </a>
       </li>
-      <li>
-        <a (click)="onGrowDiv()" class="nav-link" routerLink="/projects"  routerLinkActive="active">Projects
+      <li (click)="onGrowDiv()">
+        <a class="nav-link" routerLink="/projects"  routerLinkActive="active">Projects
         </a>
-        <i (click)="onGrowDiv()" class="{{arrow}}"
+        <i class="{{arrow}}"
            style="float: right; vertical-align: middle;"></i>
       </li>
       <div id="grow">
