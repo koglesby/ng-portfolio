@@ -27,4 +27,8 @@ export class ProjectComponent implements OnInit {
   onNextProject() {
     this.projectService.getNextProject(this.id) ? this.router.navigate(['/projects', this.id + 1]) :  this.router.navigate(['/projects', 0]);
   }
+  
+  onPrevious() {
+    this.router.navigate(['/projects', this.projectService.getPrevious(this.id)]);
+  }
 }

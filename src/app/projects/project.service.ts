@@ -1,5 +1,6 @@
 import { Project } from './project.model';
 import { Router, ActivatedRoute } from '@angular/router';
+import { isNullOrUndefined } from 'util';
 export class ProjectService {
   // constructor(private route: ActivatedRoute, private router: Router) {}
   private projects: Project[] = [
@@ -30,5 +31,9 @@ export class ProjectService {
   
   getNextProject(id: number) {
     return this.projects[id + 1];
+  }
+  
+  getPrevious(id: number) {
+    return (this.projects[id - 1] ? id - 1 : this.projects.length - 1);
   }
 }

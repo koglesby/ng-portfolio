@@ -17,7 +17,14 @@
   display: block;
   text-align: center;
   font-size: 14px;
+
 }
+.nav-side-menu .brand a {
+  cursor: pointer;
+  color: #e1ffff;
+  text-decoration: none;
+}
+
 
 .nav-side-menu .toggle-btn {
   display: none;

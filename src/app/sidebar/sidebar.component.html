@@ -1,9 +1,6 @@
 
 <div class="nav-side-menu">
-  <div class="brand">Kevin Oglesby</div>
-
-
-  <!--<i class="fa fa-bars fa-2x toggle-btn" (click)="onAnimate()"></i>-->
+  <div class="brand" ><a routerLink="/about">Kevin Oglesby</a></div>
 
     <div class="three col toggle-btn container" (click)="onAnimate()">
       <div class="hamburger {{isActive}}" id="hamburger-5">
@@ -16,11 +13,6 @@
 
   <div class="menu-list" id="navGrow" [@divState]="state">
     <ul id="menu-content" class="menu-content">
-      <!--<li>-->
-        <!--<a class="navbar-brand" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">-->
-          <!--Kevin Oglesby-->
-        <!--</a>-->
-      <!--</li>-->
       <li>
         <a class="nav-link" routerLink="/about" routerLinkActive="active">
           About
@@ -28,12 +20,9 @@
       </li>
       <li>
         <a (click)="onGrowDiv()" class="nav-link" routerLink="/projects"  routerLinkActive="active">Projects
-          <!--<i class="{{arrow}}" routerLink="/about"></i>-->
-          <!--<span class="arrow"></span>-->
         </a>
         <i (click)="onGrowDiv()" class="{{arrow}}"
            style="float: right; vertical-align: middle;"></i>
-
       </li>
       <div id="grow">
         <div class="measuringWrapper">
@@ -42,7 +31,6 @@
           </ul>
         </div>
       </div>
-
 
       <li>
         <a class="nav-link" routerLink="/skills-tools" routerLinkActive="active">
@@ -54,7 +42,6 @@
           Contact
         </a>
       </li>
-
     </ul>
   </div>
 </div>
