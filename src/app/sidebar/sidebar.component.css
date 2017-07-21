@@ -1,18 +1,3 @@
-/*.rowx {*/
-  /*background-color: blue;*/
-/*}*/
-
-/*.colx {*/
-  /*background-color: red;*/
-  /*height: 100vh;*/
-
-/*}*/
-
-/*.green {*/
-  /*background-color: green;*/
-  /*height: 100vh;*/
-/*}*/
-
 .nav-side-menu {
   overflow: hidden;
   font-family: verdana;
@@ -33,84 +18,31 @@
   text-align: center;
   font-size: 14px;
 }
+
 .nav-side-menu .toggle-btn {
   display: none;
 }
+
+
+/*Styling for main menu items*/
 .nav-side-menu ul,
 .nav-side-menu li {
   list-style: none;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   line-height: 35px;
   cursor: pointer;
 }
-/*.nav-side-menu ul .arrow:before,*/
-/*.nav-side-menu li .arrow:before {*/
-  /*font-family: FontAwesome;*/
-  /*content: "\f078";*/
-  /*vertical-align: middle;*/
-  /*float: right;*/
-/*}*/
 
-.nav-side-menu ul .active,
-.nav-side-menu li .active {
-  border-left: 3px solid #d19b3d;
-  background-color: #4f5b69;
-  outline: none;
-}
-.nav-side-menu ul .sub-menu li.active,
-.nav-side-menu li .sub-menu li.active {
-  color: #d19b3d;
-  outline: none;
-}
-.nav-side-menu ul .sub-menu li.active a,
-.nav-side-menu li .sub-menu li.active a {
-  outline: none;
-  color: #d19b3d;
-}
-
-
-
-.nav-side-menu ul .sub-menu li,
-.nav-side-menu li .sub-menu li {
-  background-color: #181c20;
-  border: none;
-  line-height: 28px;
-  border-bottom: 1px solid #23282e;
-  margin-left: 0px;
-}
-
-
-.nav-side-menu ul .sub-menu li:hover,
-.nav-side-menu li .sub-menu li:hover {
-  background-color: #020203;
-}
-
-.nav-side-menu ul .sub-menu li:focus,
-.nav-side-menu li .sub-menu li:focus {
-  outline: none;
-}
-.nav-side-menu ul .sub-menu li:before,
-.nav-side-menu li .sub-menu li:before {
-  font-family: FontAwesome;
-  content: "\f105";
-  display: inline-block;
-  padding-left: 10px;
-  padding-right: 10px;
-  /*vertical-align: middle;*/
-}
 .nav-side-menu li {
-  padding-left: 0px;
+  color: #e1ffff;
+  position: relative;
+  padding-left: 0;
   border-left: 3px solid #2e353d;
   border-bottom: 1px solid #23282e;
 }
-.nav-side-menu li {
-  text-decoration: none;
-  color: #e1ffff;
-  position: relative;
 
-}
-
+/*Links in the main menu*/
 .nav-side-menu li a {
   text-decoration: none;
   color: #e1ffff;
@@ -118,13 +50,53 @@
   outline: none;
 }
 
-.nav-side-menu .sub-menu a {
-  outline: none;
-  text-decoration: none;
-  color: #e1ffff;
-  /*position: relative;*/
+/*For Active main menu items*/
+
+.nav-side-menu li .active {
+  border-left: 3px solid #d19b3d;
+  background-color: #4f5b69;
+
 }
 
+/*///////////////////////////*/
+
+/*For the Projects sub-menu*/
+.nav-side-menu ul .sub-menu li {
+  background-color: #181c20;
+  border: none;
+  line-height: 28px;
+  border-bottom: 1px solid #23282e;
+  margin-left: 0;
+}
+
+/*For Projects Sub-menu when active*/
+.nav-side-menu ul .sub-menu li.active,
+.nav-side-menu ul .sub-menu li.active a {
+  color: #d19b3d;
+}
+
+/*Hover over Sub menu*/
+.nav-side-menu ul .sub-menu li:hover {
+  background-color: #020203;
+}
+
+/*Disable outline that appears on sub-menu items on click */
+.nav-side-menu ul .sub-menu li:focus {
+  outline: none;
+}
+
+/*For the '>' symbol in the Sub-menu*/
+.nav-side-menu ul .sub-menu li:before,
+.nav-side-menu li .sub-menu li:before {
+  font-family: FontAwesome;
+  content: "\f105";
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+
+/*For the ^ Icon on Projects */
 .nav-side-menu li i {
   outline: none;
   position: absolute;
@@ -136,6 +108,7 @@
   height: 20px;
 }
 
+/*Animating the Main menu items on Hover*/
 .nav-side-menu li:hover {
   border-left: 3px solid #d19b3d;
   background-color: #4f5b69;
@@ -145,12 +118,29 @@
   -ms-transition: all 1s ease;
   transition: all 1s ease;
 }
+
+/*Animating the sub-menu dropdown*/
+#grow {
+  -moz-transition: height .5s;
+  -ms-transition: height .5s;
+  -o-transition: height .5s;
+  -webkit-transition: height .5s;
+  transition: height .5s;
+  height: 0;
+  overflow: hidden;
+}
+
+/*/////////////////////////////////////*/
+
+/*How it behaves when viewed on small screens*/
 @media (max-width: 767px) {
   .nav-side-menu {
     position: relative;
     width: 100%;
     margin-bottom: 10px;
   }
+
+  /*The menu Dropdown button*/
   .nav-side-menu .toggle-btn {
     display: block;
     cursor: pointer;
@@ -158,7 +148,7 @@
     right: 14px;
     top: 7px;
     z-index: 10 !important;
-    padding: 0px;
+    padding: 0;
     background-color: #2e353d;
     color: #000;
     width: 50px;
@@ -189,110 +179,15 @@
     line-height: 50px !important;
   }
 }
-@media (min-width: 767px) {
-  .nav-side-menu .menu-list .menu-content {
-    display: block;
-  }
-}
-body {
-  margin: 0px;
-  padding: 0px;
-}
-
-/*#more-button{border-style:none;background:none;font:16px Serif;color:blue;margin: 0 0 10px 0;}*/
-
-/*#grow input:checked{color:red;}*/
-
-/*#more-button:hover{color:black;}*/
-
-#grow {
-  -moz-transition: height .5s;
-  -ms-transition: height .5s;
-  -o-transition: height .5s;
-  -webkit-transition: height .5s;
-  transition: height .5s;
-  height: 0;
-  overflow: hidden;
-}
-
-html, body{
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: 'Open Sans', sans-serif;
-}
-
-a{
-  text-decoration: none;
-}
-
-p, li, a{
-  font-size: 14px;
-}
-
-/* GRID */
-
-/*.twelve { width: 100%; }*/
-/*.eleven { width: 91.53%; }*/
-/*.ten { width: 83.06%; }*/
-/*.nine { width: 74.6%; }*/
-/*.eight { width: 66.13%; }*/
-/*.seven { width: 57.66%; }*/
-/*.six { width: 49.2%; }*/
-/*.five { width: 40.73%; }*/
-/*.four { width: 32.26%; }*/
-/*.three { width: 23.8%; }*/
-/*.two { width: 15.33%; }*/
-/*.one { width: 6.866%; }*/
-
-/* COLUMNS */
-
-.col {
-  display: block;
-  float:left;
-  margin: 1% 0 1% 1.6%;
-}
-
-.col:first-of-type {
-  margin-left: 0;
-}
-
-.container{
-  width: 100%;
-  max-width: 940px;
-  margin: 0 auto;
-  position: relative;
-  text-align: center;
-}
-
-/* CLEARFIX */
-
-.cf:before,
-.cf:after {
-  content: " ";
-  display: table;
-}
-
-.cf:after {
-  clear: both;
-}
-
-.cf {
-  *zoom: 1;
-}
-
-/* ALL */
-
-/*.row .three{*/
-  /*padding: 80px 30px;*/
-  /*-webkit-box-sizing: border-box;*/
-  /*-moz-box-sizing: border-box;*/
-  /*box-sizing: border-box;*/
-  /*background-color: #2c3e50;*/
-  /*color: #ecf0f1;*/
-  /*text-align: center;*/
+/*@media (min-width: 767px) {*/
+  /*.nav-side-menu .menu-list .menu-content {*/
+    /*display: block;*/
+  /*}*/
 /*}*/
+
+/*//////////////////////////////*/
+
+/* Hamburger Icon and Animation into Up arrow*/
 
 .hamburger .line{
   width: 30px;
