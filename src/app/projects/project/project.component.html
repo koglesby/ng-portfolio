@@ -1,8 +1,10 @@
-<div class="offset-6">!!!{{project.name}}!!!
+<div class="offset-6" [@routerTransition]>
+  <div>
+    !{{project.name}}!
+  </div>
 
-<div class="col-6">
-  {{id}}
-  <button class="btn btn-primary" (click)="onChangeProject('forward')">Next</button>
-  <button class="btn btn-primary" (click)="onChangeProject('back')">Previous</button>
-</div>
+  <div class="col-6">
+    <button class="btn btn-primary" (click)="onChangeProject('forward')">Next</button>
+    <button class="btn btn-primary" (click)="onChangeProject('back')">Previous</button>
+  </div>
 </div>

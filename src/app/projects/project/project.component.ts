@@ -2,11 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { ProjectService } from '../project.service';
 import { Project } from '../project.model';
 import { Params, Router, ActivatedRoute } from '@angular/router';
+import { routerTransition } from './router.animations';
 
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
-  styleUrls: ['./project.component.css']
+  styleUrls: ['./project.component.css'],
+  animations: [routerTransition()],
+  host: {'[@routerTransition]': ''}
 })
 export class ProjectComponent implements OnInit {
   
@@ -25,7 +28,9 @@ export class ProjectComponent implements OnInit {
   }
 
   onChangeProject(direction: string) {
-    this.router.navigate(['/projects', this.projectService.changeProject(this.id, direction)]);
+    var dest = this.projectService.changeProject(this.id, direction)
+    this.router.navigate(['/projects']);
+    setTimeout(() =>(this.router.navigate(['/projects', dest])), 400);
   }
 
 }
