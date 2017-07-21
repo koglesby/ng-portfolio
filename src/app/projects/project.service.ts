@@ -1,5 +1,7 @@
 import { Project } from './project.model';
+import { Router, ActivatedRoute } from '@angular/router';
 export class ProjectService {
+  // constructor(private route: ActivatedRoute, private router: Router) {}
   private projects: Project[] = [
     new Project(
       'spaghett!',
@@ -27,10 +29,6 @@ export class ProjectService {
   }
   
   getNextProject(id: number) {
-    if (this.projects[id + 1]) {
-      return this.projects[id + 1]
-    } else {
-      return this.projects[id];
-    }
+    return this.projects[id + 1];
   }
 }
