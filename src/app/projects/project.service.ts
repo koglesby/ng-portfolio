@@ -1,6 +1,7 @@
 import { Project } from './project.model';
 import { Router, ActivatedRoute } from '@angular/router';
 import { isNullOrUndefined } from 'util';
+import { Subject } from 'rxjs/Rx';
 export class ProjectService {
   // constructor(private route: ActivatedRoute, private router: Router) {}
   private projects: Project[] = [
@@ -36,5 +37,7 @@ export class ProjectService {
       return (this.projects[id - 1] ? id - 1 : this.projects.length - 1);
     }
   }
+
+  projectActivated = new Subject();
   
 }
