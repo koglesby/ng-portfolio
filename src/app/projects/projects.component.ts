@@ -12,30 +12,18 @@ import { ProjectComponent } from './project/project.component';
 })
 export class ProjectsComponent implements OnInit {
 
-  myCount: number = 0;
-
-  countChange(event) {
-    this.myCount = event;
-  }
-
-  id: number;
+  // id: number;
   constructor(private projectService: ProjectService, private router: Router) { }
-  projects: Project[];
+  // projects: Project[];
 
   ngOnInit() {
-    this.projects = this.projectService.getProjects();
-    this.projectService.projectActivated.subscribe(
-      (item: number) => {
-        this.id = item;
-        console.log(item);
-      }
-    )
+    // this.projects = this.projectService.getProjects();
+    // this.projectService.projectActivated.subscribe(
+    //   (item: number) => {
+    //     this.id = item;
+    //     console.log(item);
+    //   }
+    // )
   }
-
-  // onChangeProject(direction: string) {
-  //   var dest = this.projectService.changeProject(this.id, direction);
-  //   this.router.navigate(['/projects']);
-  //   setTimeout(() =>(this.router.navigate(['/projects', dest])), 10);
-  // }
   
 }

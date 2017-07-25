@@ -3,22 +3,39 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { isNullOrUndefined } from 'util';
 import { Subject } from 'rxjs/Rx';
 export class ProjectService {
-  // constructor(private route: ActivatedRoute, private router: Router) {}
+
+  // public name: string;
+  // public description: string;
+  // public imagePath: string;
+  // public sourcePath: string;
+  // public prodPath: string;
+
   private projects: Project[] = [
     new Project(
-      'spaghett!',
-      'suppp',
-      'bubonic'
+      'Agile Team Project',
+      'Worked on an Agile team of 5 developers to build a Ruby on Rails' +
+      ' chess application that enforces the rules of the game. ' +
+      'Under the guidance of a senior software engineer, we ' +
+      'had weekly Agile team meetings, code reviews and sprint planning.',
+      '../assets/chess.png',
+      '',
+      ''
     ),
     new Project(
-      'Second one',
-      'yupppp',
-      'funnn'
+      'Online Marketplace',
+      'You can make online purchases',
+      '../assets/flixter.png',
+      '',
+      ''
     ),
     new Project(
-      'Third one',
-      'hahahah',
-      'another string'
+      'Yelp Clone',
+      'A Yelp clone that integrates with the Google Maps API ' +
+      'and includes features like user comments, star ratings, ' +
+      'image uploading, and user authentication.',
+      '../assets/nomster.png',
+      '',
+      ''
     )
   ];
   

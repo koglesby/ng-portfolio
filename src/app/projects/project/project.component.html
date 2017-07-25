@@ -1,6 +1,11 @@
-<div class="offset-6"  [@routerTransition]="state">
-  <div>
-    !{{project.name}}!
+<div [@routerTransition]="state">
+  <div class="offset-4">
+    <div>
+      {{project.name}}
+    </div>
+  </div>
+  <div class="offset-1">
+    <img src="{{project.imagePath}}" class="app-image">
   </div>
 </div>
 
