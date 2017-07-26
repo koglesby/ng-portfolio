@@ -8,7 +8,10 @@ import { ProjectComponent } from './project/project.component';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css']
+  styleUrls: ['./projects.component.css'],
+  animations: [
+    routerTransition()
+  ]
 })
 export class ProjectsComponent implements OnInit {
   

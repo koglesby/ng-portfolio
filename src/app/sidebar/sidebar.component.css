@@ -6,8 +6,8 @@
   background-color: #2e353d;
   position: fixed;
   top: 0;
-  width: 200px;
-  max-width: 25%;
+  width: 25%;
+  max-width: 250px;
   height: 100%;
   color: #e1ffff;
 }

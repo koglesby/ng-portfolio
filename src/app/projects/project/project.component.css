@@ -1,13 +1,11 @@
 .app-image {
   width: 100%;
-  max-width: 700px;
+  max-width: 800px;
   background-color: lightgrey;
   padding: 10px;
-  margin-right: 0px;
-}
-
-.fa {
-  color: red;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .container {
@@ -16,10 +14,23 @@
 
 .container .arrow {
   position: absolute;
-  top: 40%;
+  top: 20%;
   cursor: pointer;
 }
 
-.container .arrow.left { left: -30px; }
+.app-change {
+  position: absolute;
+  /*top: 2px;*/
+  /*left: -40px;*/
+}
+.app-change-left {
+  position: relative;
+  /*left: 25%;*/
+}
+.fa {
+  cursor: pointer;
+}
 
-.container .arrow.right { right: -30px; }
+.container .arrow.left { left: 0; }
+
+.container .arrow.right { right: 0; }

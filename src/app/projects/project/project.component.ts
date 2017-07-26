@@ -11,58 +11,57 @@ import { trigger, state, style, transition, animate, keyframes} from '@angular/a
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.css'],
   animations: [
-    routerTransition(),
     trigger('projectTransition', [
       state('set', style({transform: 'translateX(0)', opacity: 1})),
       state('changing-left', style({transform: 'translateX(-600px)', opacity: 0})),
       state('changing-right', style({transform: 'translateX(600px)', opacity: 0})),
-      transition('set => changing-left', animate('100ms ease-in-out', keyframes([
+      transition('set => changing-left', animate('150ms ease-in-out', keyframes([
           style({
-            transform: 'translateX(0) scaleX(1)',
+            transform: 'translateX(0) scaleX(1) scaleY(1)',
             opacity: 1,
             offset: 0
           }),
           style({
-            transform: 'translateX(-600px) scaleX(0)',
+            transform: 'translateX(-600px) scaleX(0) scaleY(0.75)',
             opacity: 0,
             offset: 1
           })
         ]))
       ),
-      transition('set => changing-right', animate('100ms ease-in-out', keyframes([
+      transition('set => changing-right', animate('150ms ease-in-out', keyframes([
           style({
-            transform: 'translateX(0) scaleX(1)',
+            transform: 'translateX(0) scaleX(1) scaleY(1)',
             opacity: 1,
             offset: 0
           }),
           style({
-            transform: 'translateX(600px) scaleX(0)',
+            transform: 'translateX(600px) scaleX(0) scaleY(0.75)',
             opacity: 0,
             offset: 1
           })
         ]))
       ),
-      transition('changing-left => set', animate('100ms ease-in-out', keyframes([
+      transition('changing-left => set', animate('150ms ease-in-out', keyframes([
         style({
-          transform: 'translateX(600px) scaleX(0)',
+          transform: 'translateX(600px) scaleX(0) scaleY(0.75)',
           opacity: 0,
           offset: 0
         }),
         style({
-          transform: 'translateX(0) scaleX(1)',
+          transform: 'translateX(0) scaleX(1) scaleY(1)',
           opacity: 1,
           offset: 1
         })
       ]))
       ),
-      transition('changing-right => set', animate('100ms ease-in-out', keyframes([
+      transition('changing-right => set', animate('150ms ease-in-out', keyframes([
           style({
-            transform: 'translateX(-600px) scaleX(0)',
+            transform: 'translateX(-600px) scaleX(0) scaleY(0.75)',
             opacity: 0,
             offset: 0
           }),
           style({
-            transform: 'translateX(0) scaleX(1)',
+            transform: 'translateX(0) scaleX(1) scaleY(1)',
             opacity: 1,
             offset: 1
           })
@@ -100,7 +99,7 @@ export class ProjectComponent implements OnInit, OnDestroy {
     setTimeout(() =>(
       this.router.navigate(['/projects', projId]),
       this.state = 'set'
-    ), 75);
+    ), 150);
   }
   
 }

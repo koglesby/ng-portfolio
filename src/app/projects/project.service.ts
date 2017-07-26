@@ -18,15 +18,15 @@ export class ProjectService {
       'Under the guidance of a senior software engineer, we ' +
       'had weekly Agile team meetings, code reviews and sprint planning.',
       '../assets/chess.png',
-      '',
-      ''
+      'https://www.google.com',
+      'https://www.google.com'
     ),
     new Project(
       'Online Marketplace',
       'You can make online purchases',
       '../assets/flixter.png',
-      '',
-      ''
+      'https://www.google.com',
+      'https://www.google.com'
     ),
     new Project(
       'Yelp Clone',
@@ -34,8 +34,8 @@ export class ProjectService {
       'and includes features like user comments, star ratings, ' +
       'image uploading, and user authentication.',
       '../assets/nomster.png',
-      '',
-      ''
+      'https://www.google.com',
+      'https://www.google.com'
     )
   ];
   
