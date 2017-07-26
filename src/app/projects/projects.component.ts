@@ -11,7 +11,7 @@ import { ProjectComponent } from './project/project.component';
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit {
-
+  
   // id: number;
   constructor(private projectService: ProjectService, private router: Router) { }
   // projects: Project[];
@@ -25,5 +25,11 @@ export class ProjectsComponent implements OnInit {
     //   }
     // )
   }
+
+  // onChangeProject(direction: string) {
+  //   var dest = this.projectService.changeProject(this.id, direction);
+  //   this.router.navigate(['/projects']);
+  //   setTimeout(() =>(this.router.navigate(['/projects', dest])), 10);
+  // }
   
 }

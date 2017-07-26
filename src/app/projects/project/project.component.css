@@ -1,3 +1,25 @@
 .app-image {
-  max-height: 400px;
+  width: 100%;
+  max-width: 700px;
+  background-color: lightgrey;
+  padding: 10px;
+  margin-right: 0px;
 }
+
+.fa {
+  color: red;
+}
+
+.container {
+  position: relative;
+}
+
+.container .arrow {
+  position: absolute;
+  top: 40%;
+  cursor: pointer;
+}
+
+.container .arrow.left { left: -10px; }
+
+.container .arrow.right { right: -10px; }

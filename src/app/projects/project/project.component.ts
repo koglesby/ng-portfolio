@@ -17,12 +17,12 @@ import { trigger, state, style, transition, animate, keyframes} from '@angular/a
       state('changing-right', style({transform: 'translateX(600px)', opacity: 0})),
       transition('set => changing-left', animate('100ms ease-in-out', keyframes([
           style({
-            transform: 'translateX(0) scale(1)',
+            transform: 'translateX(0) scaleX(1)',
             opacity: 1,
             offset: 0
           }),
           style({
-            transform: 'translateX(-600px) scale(0)',
+            transform: 'translateX(-600px) scaleX(0)',
             opacity: 0,
             offset: 1
           })
@@ -30,12 +30,12 @@ import { trigger, state, style, transition, animate, keyframes} from '@angular/a
       ),
       transition('set => changing-right', animate('100ms ease-in-out', keyframes([
           style({
-            transform: 'translateX(0) scale(1)',
+            transform: 'translateX(0) scaleX(1)',
             opacity: 1,
             offset: 0
           }),
           style({
-            transform: 'translateX(600px) scale(0)',
+            transform: 'translateX(600px) scaleX(0)',
             opacity: 0,
             offset: 1
           })
@@ -43,12 +43,12 @@ import { trigger, state, style, transition, animate, keyframes} from '@angular/a
       ),
       transition('changing-left => set', animate('100ms ease-in-out', keyframes([
         style({
-          transform: 'translateX(600px) scale(0)',
+          transform: 'translateX(600px) scaleX(0)',
           opacity: 0,
           offset: 0
         }),
         style({
-          transform: 'translateX(0) scale(1)',
+          transform: 'translateX(0) scaleX(1)',
           opacity: 1,
           offset: 1
         })
@@ -56,12 +56,12 @@ import { trigger, state, style, transition, animate, keyframes} from '@angular/a
       ),
       transition('changing-right => set', animate('100ms ease-in-out', keyframes([
           style({
-            transform: 'translateX(-600px) scale(0)',
+            transform: 'translateX(-600px) scaleX(0)',
             opacity: 0,
             offset: 0
           }),
           style({
-            transform: 'translateX(0) scale(1)',
+            transform: 'translateX(0) scaleX(1)',
             opacity: 1,
             offset: 1
           })
@@ -99,7 +99,7 @@ export class ProjectComponent implements OnInit, OnDestroy {
     setTimeout(() =>(
       this.router.navigate(['/projects', projId]),
       this.state = 'set'
-    ), 100);
+    ), 75);
   }
   
 }

@@ -1,17 +1,28 @@
-<div [@routerTransition]="state">
-  <div class="offset-4">
+ <div [@routerTransition]="state">
     <div>
-      {{project.name}}
+      <div>
+        {{project.name}}
+      </div>
     </div>
-  </div>
-  <div class="offset-1">
-    <img src="{{project.imagePath}}" class="app-image">
-  </div>
-</div>
+    <div class="container">
+         <div class="arrow left" (click)="onChangeProject('back')">
+           <img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Chevron_left.svg">
+         </div>
 
-<div class="col-6">
-  <button class="btn btn-primary" (click)="onChangeProject('back')">Previous</button>
-  <button class="btn btn-primary" (click)="onChangeProject('forward')">Next</button>
-</div>
+          <div class="">
+            <img src="{{project.imagePath}}" class="app-image">
+          </div>
+          <div class="arrow right" (click)="onChangeProject('forward')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Chevron_right.svg">
+          </div>
 
+    </div>
+
+
+  </div>
+
+  <!--<div>-->
+    <!--<button class="btn btn-primary" (click)="onChangeProject('back')">Previous</button>-->
+    <!--<button class="btn btn-primary" (click)="onChangeProject('forward')">Next</button>-->
+  <!--</div>-->
 
