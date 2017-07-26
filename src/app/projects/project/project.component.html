@@ -1,25 +1,25 @@
- <div [@routerTransition]="state">
+<div [@routerTransition]>
+  <div [@projectTransition]="state">
     <div>
-      <div>
-        {{project.name}}
-      </div>
+      {{project.name}}
     </div>
-    <div class="container">
-         <div class="arrow left" (click)="onChangeProject('back')">
-           <img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Chevron_left.svg">
-         </div>
-
-          <div class="">
-            <img src="{{project.imagePath}}" class="app-image">
-          </div>
-          <div class="arrow right" (click)="onChangeProject('forward')">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Chevron_right.svg">
-          </div>
-
+  </div>
+  <div class="container">
+    <div class="arrow left" (click)="onChangeProject('back')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Chevron_left.svg">
     </div>
 
+    <div class="" [@projectTransition]="state">
+      <img src="{{project.imagePath}}" class="app-image">
+    </div>
+    <div class="arrow right" (click)="onChangeProject('forward')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Chevron_right.svg">
+    </div>
 
   </div>
+</div>
+
+
 
   <!--<div>-->
     <!--<button class="btn btn-primary" (click)="onChangeProject('back')">Previous</button>-->

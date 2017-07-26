@@ -11,7 +11,8 @@ import { trigger, state, style, transition, animate, keyframes} from '@angular/a
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.css'],
   animations: [
-    trigger('routerTransition', [
+    routerTransition(),
+    trigger('projectTransition', [
       state('set', style({transform: 'translateX(0)', opacity: 1})),
       state('changing-left', style({transform: 'translateX(-600px)', opacity: 0})),
       state('changing-right', style({transform: 'translateX(600px)', opacity: 0})),

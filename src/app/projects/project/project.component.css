@@ -20,6 +20,6 @@
   cursor: pointer;
 }
 
-.container .arrow.left { left: -10px; }
+.container .arrow.left { left: -30px; }
 
-.container .arrow.right { right: -10px; }
+.container .arrow.right { right: -30px; }
