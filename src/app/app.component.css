@@ -1,5 +1,8 @@
 .main {
   background-color: lightgrey;
-  height: 103vh;
-  padding: 5%;
+  height: 100%;
+}
+
+.main-outlet {
+  padding: 20px;
 }

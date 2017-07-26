@@ -15,7 +15,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ProjectComponent } from './projects/project/project.component';
 import { ProjectService } from './projects/project.service';
-import { ProjectListComponent } from './sidebar/project-list/project-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
@@ -41,7 +40,6 @@ const appRoutes: Routes = [
     ProjectsComponent,
     SkillsComponent,
     ProjectComponent,
-    ProjectListComponent,
     PageNotFoundComponent
   ],
   imports: [

@@ -1,3 +1,9 @@
 .heading {
   text-align: center;
 }
+
+.my-pic img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 25%;
+}

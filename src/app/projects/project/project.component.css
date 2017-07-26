@@ -8,29 +8,38 @@
   margin-top: 10px;
 }
 
-.container {
-  position: relative;
-}
-
-.container .arrow {
-  position: absolute;
-  top: 20%;
-  cursor: pointer;
-}
-
-.app-change {
-  position: absolute;
-  /*top: 2px;*/
-  /*left: -40px;*/
-}
-.app-change-left {
-  position: relative;
-  /*left: 25%;*/
-}
 .fa {
   cursor: pointer;
 }
 
-.container .arrow.left { left: 0; }
 
-.container .arrow.right { right: 0; }
+/*.container {*/
+  /*position: relative;*/
+/*}*/
+
+/*.container .arrow {*/
+  /*position: absolute;*/
+  /*top: 20%;*/
+  /*cursor: pointer;*/
+/*}*/
+/*.button-links {*/
+  /*position: relative;*/
+  /*left: 25%;*/
+  /*right: 25%;*/
+  /*margin-bottom: 20px;*/
+/*}*/
+
+/*.app-change {*/
+  /*position: absolute;*/
+  /*!*top: 2px;*!*/
+  /*!*left: -40px;*!*/
+/*}*/
+/*.app-change-left {*/
+  /*position: relative;*/
+  /*!*left: 25%;*!*/
+/*}*/
+
+
+/*.container .arrow.left { left: 0; }*/
+
+/*.container .arrow.right { right: 0; }*/

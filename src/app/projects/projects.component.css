@@ -3,6 +3,7 @@
   background: grey;
   padding: 10px;
   display: block;
+  min-width: 200px;
   /*margin:5px;*/
 }
 
