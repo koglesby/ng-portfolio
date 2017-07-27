@@ -1,9 +1,11 @@
 .projects {
   /*max-width: 800px;*/
   background: grey;
-  padding: 10px;
+  /*padding: 5px;*/
   display: block;
   min-width: 200px;
+  border-radius: 8px;
+  margin: 0;
   /*margin:5px;*/
 }
 

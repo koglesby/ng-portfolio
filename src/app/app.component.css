@@ -1,11 +1,13 @@
 .main {
   background-color: lightgrey;
+  min-height: 100vh;
   height: 100%;
   width: 100%
 }
 
 .main-outlet {
-  padding: 20px;
+  padding-right: 35px;
+  padding-left: 30px;
 }
 
 @media (min-width: 1024px) {
@@ -16,7 +18,7 @@
 
 @media (min-width: 1224px) {
   .main-outlet {
-    right: 4%;
+    right: 3%;
   }
 }
 
