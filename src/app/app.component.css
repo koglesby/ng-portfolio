@@ -4,5 +4,25 @@
 }
 
 .main-outlet {
-  padding: 20px;
+  padding: 35px;
+
+}
+
+@media (min-width: 1024px) {
+  .main-outlet {
+    right: 1%;
+  }
+}
+
+@media (min-width: 1224px) {
+  .main-outlet {
+    right: 4%;
+  }
+}
+
+@media (min-width: 1824px) {
+  .main-outlet {
+    right: 6%;
+  }
+
 }
