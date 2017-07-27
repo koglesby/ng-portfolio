@@ -25,13 +25,15 @@
         <i class="fa fa-chevron-right fa-2x" (click)="onChangeProject('forward')"></i>
       </div>
     </div>
+
+
+      <p class="description">
+        {{project.description}}
+      </p>
+
   </div>
 
-  <div class="app-image" [@projectTransition]="state">
-    <p>
-      {{project.description}}
-    </p>
-  </div>
+
 
 
 
