@@ -1,9 +1,6 @@
-.heading {
-  text-align: center;
-}
-
 .my-pic img {
   width: 100%;
-  max-width: 300px;
-  border-radius: 25%;
+  min-width: 170px;
+  margin-top: 20px;
+  border-radius: 5%;
 }
