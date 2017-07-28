@@ -19,7 +19,7 @@
         </a>
       </li>
       <li (click)="onGrowDiv()">
-        <a class="nav-link" routerLink="/projects"  routerLinkActive="active">Projects
+        <a class="nav-link" routerLink="/projects" (click)="onNavigate()" routerLinkActive="active">Projects
         </a>
         <i class="{{arrow}}"
            style="float: right; vertical-align: middle;"></i>
