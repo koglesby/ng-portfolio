@@ -52,7 +52,7 @@ a:hover {
 }
 
 .btn:hover img{
-  filter: grayscale(1) brightness(1) saturate(1) contrast(100%) invert(1);
+  filter: invert(1);
 }
 
 
