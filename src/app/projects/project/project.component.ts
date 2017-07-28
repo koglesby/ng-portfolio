@@ -85,8 +85,16 @@ export class ProjectComponent implements OnInit, OnDestroy {
         this.id = +params['id'];
         this.projectService.projectActivated.next(this.id);
         this.project = this.projectService.getProject(this.id);
+        // console.log(this.projectService.navigatedProject);
       }
     );
+    this.projectService.navigatedProject.subscribe(
+      (index) => {
+        (this.id < index) ? this.state = 'changing-right' : this.state = 'changing-left';
+        setTimeout(() => ( this.state = 'set'), 150)
+      }
+    );
+
   }
 
   ngOnDestroy() {

@@ -57,5 +57,5 @@ export class ProjectService {
 
   projectActivated = new Subject();
   
-  
+  navigatedProject = new Subject();
 }

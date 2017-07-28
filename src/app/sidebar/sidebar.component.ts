@@ -50,4 +50,8 @@ export class SidebarComponent implements OnInit {
     }
   }
 
+  onNavigate(index) {
+    this.projectService.navigatedProject.next(index);
+  }
+
 }

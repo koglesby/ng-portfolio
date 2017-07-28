@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ProjectService } from './project.service';
 import { Router } from '@angular/router';
 import { routerTransition } from './project/router.animations';
+import { trigger, state, style, transition } from '@angular/animations';
 import { Project } from './project.model';
 import { ProjectComponent } from './project/project.component';
 
