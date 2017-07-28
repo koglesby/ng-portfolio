@@ -22,6 +22,45 @@
   cursor: pointer;
 }
 
+.btn {
+  color: black;
+  background-color: dimgray;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  margin-right: 0;
+  margin-left: 0;
+}
+.btn:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.btn img {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.btn:hover {
+  background-color: #00b3ee;
+  color: white;
+  text-decoration: none;
+  outline: none;
+}
+
+.btn:hover img{
+  filter: grayscale(1) brightness(1) saturate(1) contrast(100%) invert(1);
+}
+
+
+.source-link img {
+  max-height: 20px;
+  margin-right: 5px;
+}
+
 
 /*.container {*/
   /*position: relative;*/

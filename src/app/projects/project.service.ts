@@ -18,7 +18,7 @@ export class ProjectService {
       'Under the guidance of a senior software engineer, we ' +
       'had weekly Agile team meetings, code reviews and sprint planning.',
       '../assets/chess.png',
-      'https://www.google.com',
+      'https://www.yahoo.com',
       'https://www.google.com'
     ),
     new Project(
