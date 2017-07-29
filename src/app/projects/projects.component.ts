@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { routerTransition } from './project/router.animations';
+import { routerTransition } from './router.animations';
 
 @Component({
   selector: 'app-projects',

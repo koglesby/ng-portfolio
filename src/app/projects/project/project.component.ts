@@ -1,8 +1,7 @@
-import { Component, OnInit, OnDestroy, Input } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ProjectService } from '../project.service';
 import { Project } from '../project.model';
 import { Params, Router, ActivatedRoute } from '@angular/router';
-import { routerTransition } from './router.animations';
 import { Subscription } from 'rxjs/Rx';
 import { trigger, state, style, transition, animate, keyframes} from '@angular/animations';
 
@@ -15,7 +14,7 @@ import { trigger, state, style, transition, animate, keyframes} from '@angular/a
       state('set', style({transform: 'translateX(0)', opacity: 1})),
       state('changing-left', style({transform: 'translateX(-600px)', opacity: 0})),
       state('changing-right', style({transform: 'translateX(600px)', opacity: 0})),
-      transition('set => changing-left', animate('150ms ease-in-out', keyframes([
+      transition('set => changing-left', animate('160ms ease-in-out', keyframes([
           style({
             transform: 'translateX(0) scaleX(1) scaleY(1)',
             opacity: 1,
@@ -28,7 +27,7 @@ import { trigger, state, style, transition, animate, keyframes} from '@angular/a
           })
         ]))
       ),
-      transition('set => changing-right', animate('150ms ease-in-out', keyframes([
+      transition('set => changing-right', animate('160ms ease-in-out', keyframes([
           style({
             transform: 'translateX(0) scaleX(1) scaleY(1)',
             opacity: 1,
@@ -41,7 +40,7 @@ import { trigger, state, style, transition, animate, keyframes} from '@angular/a
           })
         ]))
       ),
-      transition('changing-left => set', animate('150ms ease-in-out', keyframes([
+      transition('changing-left => set', animate('160ms ease-in-out', keyframes([
         style({
           transform: 'translateX(600px) scaleX(0) scaleY(0.75)',
           opacity: 0,
@@ -54,7 +53,7 @@ import { trigger, state, style, transition, animate, keyframes} from '@angular/a
         })
       ]))
       ),
-      transition('changing-right => set', animate('150ms ease-in-out', keyframes([
+      transition('changing-right => set', animate('160ms ease-in-out', keyframes([
           style({
             transform: 'translateX(-600px) scaleX(0) scaleY(0.75)',
             opacity: 0,
@@ -96,7 +95,7 @@ export class ProjectComponent implements OnInit, OnDestroy {
         } else {
           this.state = 'changing-left';
         }
-        setTimeout(() => ( this.state = 'set'), 150)
+        setTimeout(() => ( this.state = 'set'), 0)
       }
     );
   }
@@ -108,10 +107,10 @@ export class ProjectComponent implements OnInit, OnDestroy {
   onChangeProject(direction: string) {
     direction == 'forward' ? this.state = 'changing-left' : this.state = 'changing-right';
     var projId = this.projectService.changeProject(this.id, direction);
-    setTimeout(() =>(
-      this.router.navigate(['/projects', projId]),
-      this.state = 'set'
-    ), 150);
+    setTimeout(() => {
+      this.router.navigate(['/projects', projId]);
+      this.state = 'set';
+    }, 160);
   }
   
 }
