@@ -115,6 +115,9 @@
   width: 20px;
   height: 20px;
 }
+.nav-side-menu li i:hover {
+  color: #d19b3d;
+}
 
 /*Animating the Main menu items on Hover*/
 .nav-side-menu li:hover {

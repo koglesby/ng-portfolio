@@ -4,6 +4,12 @@
   padding: 10px;
 }
 
+h2 {
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 4px;
+}
+
 .description {
   width: 100%;
   background-color: #2e353d;
@@ -16,6 +22,8 @@
   position: relative;
   cursor: pointer;
   top: 1px;
+  margin-right: -5px;
+  margin-left: -5px;
 }
 
 .fa:hover {
@@ -73,10 +81,10 @@ a:hover {
   max-height: 20px;
   margin-right: 5px;
 }
-h {
-  color: #d19b3d #23282e #4f5b69 #020203 #181c20;
-}
-h2 {
-  color:  #e1ffff #2e353d;
-}
+/*h {*/
+  /*color: #d19b3d #23282e #4f5b69 #020203 #181c20;*/
+/*}*/
+/*h2 {*/
+  /*color:  #e1ffff #2e353d;*/
+/*}*/
 

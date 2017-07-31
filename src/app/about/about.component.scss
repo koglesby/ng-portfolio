@@ -4,6 +4,12 @@
   //margin-top: 20px;
   border-radius: 2%;
 }
+
+p {
+  color: #e1ffff;
+  padding: 14px;
+}
+
 @mixin faded($offset, $blur-radius, $spread-radius)
 {
   &.faded-left:after {
@@ -111,13 +117,13 @@ $faded-wide-spread-radius: 28px !default;
 
 // Colored panel
 .panel {
-  background-color: lightgray;
+  background-color: #4f5b69;
   padding: 1em;
-  color: white;
+  color: #4f5b69;
 
   .faded {
     // Use a text color the same as the background colour of the panel will mean the fade effect matches the backround correctly
-    color: lightgrey;
+    color: #4f5b69;
   }
 }
 
