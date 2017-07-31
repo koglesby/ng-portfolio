@@ -1,5 +1,5 @@
 .main {
-  background-color: lightgrey;
+  background-color: #4f5b69;
   min-height: 100vh;
   height: 100%;
   width: 100%
@@ -7,7 +7,7 @@
 
 .main-outlet {
   margin-top: 10px;
-  padding-right: 33px;
+  padding-right: 32px;
   padding-left: 30px;
 }
 

@@ -1,7 +1,7 @@
 .app-image {
   width: 100%;
   /*max-width: 800px;*/
-  background-color: lightgrey;
+  background-color: #2e353d;
   padding: 10px;
   /*margin-right: 0px;*/
   /*margin-bottom: 0px;*/
@@ -9,22 +9,26 @@
 }
 
 .description {
+  color: #e1ffff;
   width: 100%;
-  background-color: lightgrey;
+  background-color: #2e353d;
   /*padding: 8px;*/
   /*margin-top: 10px;*/
   margin-bottom: 10px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  padding: 6px;
 }
 
 .fa {
   cursor: pointer;
+  position: absolute;
+  top: -1400%;
 }
 
 .btn {
-  color: black;
-  background-color: dimgray;
+  color: #e1ffff;
+  background-color: #181c20;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   margin-right: 0;
@@ -39,21 +43,82 @@ a:hover {
   text-decoration: none;
 }
 
-.btn img {
+
+a {
+  position: relative;
+}
+
+.bottom {
+  /*position: absolute;*/
+  /*left: -10px;*/
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  /*opacity: 0;*/
+}
+
+.top {
+  position: absolute;
+  top: 10px;
+  opacity: 1;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
 }
 
+.btn:hover .top {
+  opacity: 0;
+}
+
+/*.btn:hover .bottom {*/
+  /*opacity: 1;*/
+/*}*/
+
 .btn:hover {
-  background-color: #00b3ee;
-  color: white;
+  background-color: #020203;
+  color: #d19b3d;
   text-decoration: none;
   outline: none;
 }
 
-.btn:hover img{
-  filter: invert(1);
+
+#source {
+  float: left;
+  position: relative;
+  top: 1px;
+  padding-top: 0;
+  margin-top: 0;
+  margin-right: 5px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  background: url('../../../assets/github-icon-light.png') no-repeat center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  height: 20px;
+  width: 20px;
 }
+
+.btn:hover #source {
+  float: left;
+  position: relative;
+  top: 1px;
+  padding-top: 0;
+  margin-top: 0;
+  margin-right: 5px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  background: url('../../../assets/github-icon-color.png') no-repeat center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  height: 20px;
+  width: 20px;
+}
+
+/*.btn:hover img{*/
+  /*filter: brightness(0.5) sepia(1) hue-rotate(132deg) saturate(103.2%) brightness(91.2%);*/
+/*}*/
 
 
 .source-link img {
