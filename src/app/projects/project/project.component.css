@@ -23,6 +23,7 @@
 }
 
 .btn {
+  position: relative;
   color: #e1ffff;
   background-color: #181c20;
   -webkit-transition-duration: 0.4s; /* Safari */
@@ -45,19 +46,26 @@ a:hover {
 }
 .btn .top {
   position: absolute;
-  top: 12px;
+  top: 27.5%;
+  left: 16px;
+  opacity: 1;
 }
 
 
 .btn:hover {
-  background-color: #00b3ee;
-  color: white;
+  background-color: #020203;
+  color: #d19b3d;
   text-decoration: none;
   outline: none;
 }
 
-.btn:hover img{
-  filter: invert(1);
+.btn:hover .top {
+  opacity: 0;
+}
+
+
+.btn:hover .bottom {
+  opacity: 1
 }
 
 
