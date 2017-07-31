@@ -1,25 +1,25 @@
 .app-image {
   width: 100%;
-  /*max-width: 800px;*/
-  background-color: #23282e;
+  background-color: #2e353d;
   padding: 10px;
-  /*margin-right: 0px;*/
-  /*margin-bottom: 0px;*/
-  /*margin-top: 0px;*/
 }
 
 .description {
   width: 100%;
-  background-color: #23282e;
-  /*padding: 8px;*/
-  /*margin-top: 10px;*/
-  margin-bottom: 10px;
+  background-color: #2e353d;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  padding: 9px;
 }
 
 .fa {
+  position: relative;
   cursor: pointer;
+  top: 1px;
+}
+
+.fa:hover {
+  color: #d19b3d
 }
 
 .btn {
