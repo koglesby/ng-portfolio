@@ -25,7 +25,7 @@ export class SidebarComponent implements OnInit {
   isActive = '';
   
   projects: Project[];
-
+  
   constructor(private projectService: ProjectService) { }
 
   onAnimate() {

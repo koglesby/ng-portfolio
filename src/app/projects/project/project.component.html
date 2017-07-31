@@ -15,14 +15,13 @@
       </div>
       <div class="col-8">
         <a href="{{project.prodPath}}" class="btn source-link">
-          <img src="../assets/heroku-icon-light.png" class="top">
-          <img src="../assets/heroku-icon-color.png" class="bottom">
+            <img class="top" src="../assets/heroku-icon-light.png">
+            <img class="bottom" src="../assets/heroku-icon-color.png">
             deployed app
         </a>
         <a href="{{project.sourcePath}}" class="btn source-link">
-          <img src="../assets/github-icon-light.png" class="top">
-          <img src="../assets/github-icon-color.png" class="bottom">source
-          code
+          <img class="top" src="../assets/github-icon-light.png">
+          <img class="bottom" src="../assets/github-icon-color.png">source code
         </a>
 
       </div>
@@ -35,6 +34,5 @@
       <p class="description"  [@projectTransition]="state">
         {{project.description}}
       </p>
-
 
   </div>
