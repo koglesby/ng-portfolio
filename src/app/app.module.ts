@@ -21,13 +21,12 @@ const appRoutes: Routes = [
   { path: '', component: AboutComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
-
+  { path: 'skills-tools', component: SkillsComponent },
+  { path: 'not-found', component: PageNotFoundComponent },
   { path: 'projects', component: ProjectsComponent, children: [
     { path: '', redirectTo: '/projects/0', pathMatch: 'full' },
     { path: ':id', component: ProjectComponent }
   ] },
-  { path: 'skills-tools', component: SkillsComponent },
-  { path: 'not-found', component: PageNotFoundComponent },
   { path: '**', redirectTo: '/not-found'}
 ];
 
