@@ -1,37 +1,35 @@
+<div [@projectTransition]="state">
+  <h2>
+    {{project.name}}
+  </h2>
+</div>
 
-  <div [@projectTransition]="state">
-    <h2>
-      {{project.name}}
-    </h2>
+<div [@projectTransition]="state">
+  <img src="{{project.imagePath}}" class="app-image">
+</div>
+<div class="row align-items-center">
+  <div class="col-2">
+    <i class="fa fa-chevron-left fa-2x" (click)="onChangeProject('back')"></i>
   </div>
+  <div class="col-8">
+    <a href="{{project.prodPath}}" class="btn source-link">
+        <img class="top" src="../assets/heroku-icon-light.png">
+        <img class="bottom" src="../assets/heroku-icon-color.png">
+        deployed app
+    </a>
+    <a href="{{project.sourcePath}}" class="btn source-link">
+      <img class="top" src="../assets/github-icon-light.png">
+      <img class="bottom" src="../assets/github-icon-color.png">source code
+    </a>
 
-    <div class="" [@projectTransition]="state">
-      <img src="{{project.imagePath}}" class="app-image">
-    </div>
-    <div class="row align-items-center">
-      <div class="col-2">
-        <i class="fa fa-chevron-left fa-2x" (click)="onChangeProject('back')"></i>
-      </div>
-      <div class="col-8">
-        <a href="{{project.prodPath}}" class="btn source-link">
-            <img class="top" src="../assets/heroku-icon-light.png">
-            <img class="bottom" src="../assets/heroku-icon-color.png">
-            deployed app
-        </a>
-        <a href="{{project.sourcePath}}" class="btn source-link">
-          <img class="top" src="../assets/github-icon-light.png">
-          <img class="bottom" src="../assets/github-icon-color.png">source code
-        </a>
+  </div>
+  <div class="col-2">
+    <i class="fa fa-chevron-right fa-2x" (click)="onChangeProject('forward')"></i>
+  </div>
+</div>
 
-      </div>
-      <div class="col-2">
-        <i class="fa fa-chevron-right fa-2x" (click)="onChangeProject('forward')"></i>
-      </div>
-    </div>
-
-
-      <div class="col-12">
-        <p class="description"  [@projectTransition]="state">
-          {{project.description}}
-        </p>
-      </div>
+<div class="col-12">
+  <p class="description"  [@projectTransition]="state">
+    {{project.description}}
+  </p>
+</div>
