@@ -2,13 +2,18 @@
   background-color: #4f5b69;
   min-height: 100vh;
   height: 100%;
-  width: 100%
+  width: 100%;
 }
 
 .main-outlet {
+  position: relative;
   margin-top: 10px;
-  padding-right: 33px;
+  padding-right: 30px;
   padding-left: 30px;
+}
+
+.outlet-new {
+  padding: 10px;
 }
 
 @media (min-width: 1024px) {
@@ -25,7 +30,7 @@
 
 @media (min-width: 1824px) {
   .main-outlet {
-    right: 6%;
+    /*right: 6%;*/
   }
 
 }
