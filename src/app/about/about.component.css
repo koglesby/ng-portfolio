@@ -5,7 +5,7 @@
 
 p {
   color: #e1ffff;
-  padding: 1px; }
+  padding: 14px; }
 
 .faded {
   position: relative;
@@ -114,7 +114,9 @@ p {
 .panel {
   background-color: #4f5b69;
   padding: 1em;
-  color: #4f5b69; }
+  color: #4f5b69;
+  margin-left: 5%;
+  margin-right: 5%; }
   .panel .faded {
     color: #4f5b69; }
 

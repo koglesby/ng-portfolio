@@ -9,7 +9,7 @@
   width: 25%;
   max-width: 250px;
   height: 100%;
-  color: #e1ffff;
+  /*color: #e1ffff;*/
 }
 
 .nav-side-menu .brand {
@@ -22,7 +22,7 @@
 }
 .nav-side-menu .brand a {
   cursor: pointer;
-  color: #e1ffff;
+  /*color: #e1ffff;*/
   text-decoration: none;
 }
 
@@ -43,7 +43,7 @@
 }
 
 .nav-side-menu li {
-  color: #e1ffff;
+  /*color: #e1ffff;*/
   position: relative;
   padding-left: 0;
   border-left: 3px solid #2e353d;
@@ -53,7 +53,7 @@
 /*Links in the main menu*/
 .nav-side-menu li a {
   text-decoration: none;
-  color: #e1ffff;
+  /*color: #e1ffff;*/
   position: relative;
   outline: none;
 }

@@ -2,4 +2,10 @@
 html, body {
   overflow-x: hidden;
   background-color: #4f5b69;
+  color: #e1ffff;
+}
+
+a, a:hover, a:focus {
+  color: #e1ffff;
+  text-decoration: none;
 }
