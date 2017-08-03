@@ -3,6 +3,7 @@ html, body {
   overflow-x: hidden;
   background-color: #4f5b69;
   color: #e1ffff;
+  font-family: Verdana;
 }
 
 a, a:hover, a:focus {

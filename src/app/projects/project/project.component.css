@@ -27,8 +27,13 @@ h2 {
 }
 
 .fa:hover {
-  color: #d19b3d
+  color: #d19b3d;
 }
+/*.fa:hover {*/
+  /*color: #e1ffff;*/
+  /*-webkit-text-stroke-width: 1px;*/
+  /*-webkit-text-stroke-color: #d19b3d;*/
+/*}*/
 
 .btn {
   position: relative;

@@ -1,6 +1,5 @@
 .nav-side-menu {
   overflow: hidden;
-  font-family: verdana;
   font-size: 12px;
   font-weight: 200;
   background-color: #2e353d;
@@ -9,7 +8,6 @@
   width: 25%;
   max-width: 250px;
   height: 100%;
-  /*color: #e1ffff;*/
 }
 
 .nav-side-menu .brand {
@@ -22,7 +20,6 @@
 }
 .nav-side-menu .brand a {
   cursor: pointer;
-  /*color: #e1ffff;*/
   text-decoration: none;
 }
 
@@ -43,7 +40,6 @@
 }
 
 .nav-side-menu li {
-  /*color: #e1ffff;*/
   position: relative;
   padding-left: 0;
   border-left: 3px solid #2e353d;
