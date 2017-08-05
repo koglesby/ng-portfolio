@@ -12,14 +12,16 @@
     <i class="fa fa-chevron-left fa-2x" (click)="onChangeProject('back')"></i>
   </div>
   <div class="col-8">
-    <a href="{{project.prodPath}}" class="btn source-link">
-        <img class="top" src="../assets/heroku-icon-light.png">
-        <img class="bottom" src="../assets/heroku-icon-color.png">
-        deployed app
-    </a>
-    <a href="{{project.sourcePath}}" class="btn source-link">
+    <a href="{{project.sourcePath}}" class="btn">
+      <img class="bottom" src="../assets/github-icon-color.png">
       <img class="top" src="../assets/github-icon-light.png">
-      <img class="bottom" src="../assets/github-icon-color.png">source code
+      source code
+    </a>
+    <a *ngIf="project.prodPath != ''" href="{{project.prodPath}}" class="btn deployed">
+      <!--<img class="bottom"-->
+           <!--[src]="project.name == 'Angular 4 App' ? '../assets/aws-icon-sm.png ' : '../assets/heroku-icon-color.png'">-->
+      <!--<img class="top" src="../assets/heroku-icon-light.png">-->
+      deployed app
     </a>
 
   </div>
@@ -29,7 +31,7 @@
 </div>
 
 <div class="col-12">
-  <p class="description"  [@projectTransition]="state">
+  <p [@projectTransition]="state">
     {{project.description}}
   </p>
 </div>

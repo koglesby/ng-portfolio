@@ -81,8 +81,8 @@ export class ProjectComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.subscription = this.route.params.subscribe(
       (params: Params) => {
-        // Set the number below (+params['id'] < number) to the total number of projects. For redirecting from invalid project id.
-        (+params['id'] < 3) ? this.id = +params['id'] : this.router.navigate(['/projects/0']);
+        (+params['id'] < this.projectService.getProjectsLength()) ? this.id = +params['id'] : this.router.navigate(['/projects/0']);
+        // For redirecting from invalid project id.^^
         this.projectService.projectActivated.next(this.id);
         this.project = this.projectService.getProject(this.id);
       }
