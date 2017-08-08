@@ -183,7 +183,7 @@
     background-color: #4f5b69;
   }
   .nav-side-menu .toggle-btn:active {
-    background-color: white;
+    background-color: #e1ffff;
     -webkit-transition: all .25s ease;
     -moz-transition: all .25s ease;
     -o-transition: all .25s ease;
@@ -211,7 +211,7 @@
 .hamburger .line{
   width: 30px;
   height: 4px;
-  background-color: #ecf0f1;
+  background-color: #e1ffff;
   display: block;
   margin: 10.8% auto;
   -webkit-transition: all 0.3s ease-in-out;

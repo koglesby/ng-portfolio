@@ -1,10 +1,11 @@
 h1 {
   position: relative;
-  top:-20px;
+
   padding: 20px;
   margin-top:0;
   color: #d19b3d;
   background-color: #23282e;
+  border-radius: 5px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
