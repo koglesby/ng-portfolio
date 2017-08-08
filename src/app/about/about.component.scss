@@ -5,8 +5,19 @@
   border-radius: 2%;
 }
 
+.contact {
+  padding-top: 60px;
+}
+
+.col-12 {
+  margin: 5px;
+}
+
+.row {
+  margin-top: 5px;
+}
 .reddish {
-  height: 30px;
+  height: 20px;
   width: 100%;
   border-style: solid;
   border-color: #d19b3d;
@@ -17,31 +28,31 @@
 .reddish:before {
   display: block;
   content: "";
-  height: 0px;
-  margin-top: -28px;
+  height: 20px;
+  margin-top: -10px;
   border-style: solid;
   border-color:#d19b3d;
   border-width: 0 0 2px 0;
   border-radius: 8px;
 }
 
-h1 {
+.heading {
   background-color: #23282e;
-  padding: 10px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  margin-bottom: 0;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 0;
 }
 
-h2 {
-  background-color: #2e353d;
+h1 {
+  color: #d19b3d;
+  //background-color: #2e353d;
   padding: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-radius: 10px;
+
 }
 
 .bio-container {
-  background-color: #23282e;
+  background-color: #2e353d;
   border-radius: 10px;
 }
 
@@ -156,16 +167,16 @@ $faded-wide-spread-radius: 28px !default;
 
 // Colored panel
 .panel {
-  background-color: #4f5b69;
+  background-color: #23282e;
   padding: 1em;
-  color: #4f5b69;
-  //margin-left:5%;
-  //margin-right: 5%;
+  color: #23282e;
+  margin-left:10px;
+  margin-right: 5%;
   //left: 5%;
 
   .faded {
     // Use a text color the same as the background colour of the panel will mean the fade effect matches the backround correctly
-    color: #4f5b69;
+    color: #23282e;
   }
 }
 

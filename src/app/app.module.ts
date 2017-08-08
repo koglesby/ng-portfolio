@@ -18,8 +18,8 @@ import { ProjectService } from './projects/project.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
-  { path: '', component: AboutComponent },
   { path: 'about', component: AboutComponent },
+  { path: '', redirectTo: 'about', pathMatch: 'full' },
   { path: 'contact', component: ContactComponent },
   { path: 'skills-tools', component: SkillsComponent },
   { path: 'not-found', component: PageNotFoundComponent },

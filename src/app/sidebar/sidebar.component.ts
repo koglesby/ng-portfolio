@@ -35,6 +35,7 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit() {
     this.projects = this.projectService.getProjects();
+    setTimeout(() => this.onGrowDiv(),0);
   }
 
   onGrowDiv() {

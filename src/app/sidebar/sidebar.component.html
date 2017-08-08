@@ -21,8 +21,9 @@
       <li (click)="onGrowDiv()">
         <a class="nav-link" routerLink="/projects" (click)="onNavigate(i)" routerLinkActive="active">
           Projects
+
         </a>
-        <i class="{{arrow}}"
+        <i class="{{arrow}}" (click)="onGrowDiv()"
            style="float: right; vertical-align: middle;"></i>
       </li>
       <div id="grow">
@@ -36,14 +37,14 @@
 
       <li>
         <a class="nav-link" routerLink="/skills-tools" routerLinkActive="active">
-          Skills and Tools
+          Skills & Tools
         </a>
       </li>
-      <li>
-        <a class="nav-link" routerLink="/contact" routerLinkActive="active">
-          Contact
-        </a>
-      </li>
+      <!--<li>-->
+        <!--<a class="nav-link" routerLink="/contact" routerLinkActive="active">-->
+          <!--Contact-->
+        <!--</a>-->
+      <!--</li>-->
     </ul>
   </div>
 </div>

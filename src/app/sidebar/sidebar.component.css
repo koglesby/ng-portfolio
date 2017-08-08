@@ -140,6 +140,17 @@
 /*/////////////////////////////////////*/
 
 /*How it behaves when viewed on small screens*/
+@media only screen and (max-device-width: 480px) {
+  .nav-side-menu li:hover {
+    background-color: #2e353d;
+  }
+
+  .nav-side-menu li i:hover {
+    color: #e1ffff;
+  }
+
+}
+
 @media (max-width: 768px) {
   .nav-side-menu {
     position: relative;

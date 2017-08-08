@@ -74,6 +74,23 @@ export class ProjectService {
       '../assets/reciperoost.png',
       'https://github.com/koglesby/reciperoost',
       'http://ng-reciperoost-deployment.s3-website-us-west-1.amazonaws.com/'
+    ),
+    new Project(
+      'Microservices',
+      'This project has a front end which was build using the Angular 4 framework' +
+      'and integrates with rails microservices. It is sort of an outline. It uses' +
+      'both client-side and server-side validation',
+      '../assets/freelance-camp.jpg',
+      'https://github.com/koglesby/freelance-camp',
+      'http://koglesby-freelance-camp.herokuapp.com/home'
+    ),
+    new Project(
+      'Ionic App',
+      'This project was built using the Ionic framework, and uses firebase, ' +
+      'and has been compiled into an apk',
+      '../assets/reciperoost-mobile.jpg',
+      'https://github.com/koglesby/reciperoost-mobile',
+      ''
     )
   ];
   
@@ -97,7 +114,7 @@ export class ProjectService {
     }
   }
 
-  projectActivated = new Subject();
+  projectActivated = new Subject<number>();
   
-  navigatedProject = new Subject();
+  navigatedProject = new Subject<number>();
 }
