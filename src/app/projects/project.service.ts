@@ -91,6 +91,15 @@ export class ProjectService {
       '../assets/reciperoost-mobile.jpg',
       'https://github.com/koglesby/reciperoost-mobile',
       ''
+    ),
+    new Project(
+      'Single Page Portfolio',
+      "You're looking at this app right now! Whoa, so meta! This app was built from scratch using the Angular 4 framework" +
+      " and incorporates Angular animations, makes use of services in order to pass data to different components, " +
+      "and easily add new projects.",
+      '../assets/portfolio.jpg',
+      'https://github.com/koglesby/ng-portfolio',
+      ''
     )
   ];
   

@@ -1,32 +1,30 @@
-.main-outlet {
-  width: 100vw;
+.super {
+  overflow: hidden;
   position: relative;
-  margin-top: 10px;
-  /*padding-right: 30px;*/
-  padding-left: 30px;
-}
-
-@media (min-width: 767px) {
-  .main-outlet {
-    padding-right: 30px;
-  }
+  width: 100%;
+  padding: 10px;
 }
 
 @media (min-width: 1024px) {
-  .main-outlet {
+  .super {
+    right: .5%;
+  }
+}
+@media (min-width: 1124px) {
+  .super {
     right: 1%;
   }
 }
 
 @media (min-width: 1224px) {
-  .main-outlet {
-    right: 3%;
+  .super {
+    right: 2.5%;
   }
 }
 
 @media (min-width: 1824px) {
-  .main-outlet {
-    /*right: 6%;*/
+  .super {
+    right: 6%;
   }
 
 }

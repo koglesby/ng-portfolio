@@ -12,12 +12,13 @@ h2 {
 }
 
 p {
-  width: 100%;
+  width: 96%;
   background-color: #2e353d;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   padding: 9px;
-  /*color: #d19b3d;*/
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 .fa {

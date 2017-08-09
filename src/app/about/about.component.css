@@ -10,19 +10,20 @@
 a:hover {
   text-decoration: underline; }
 
-.reddish {
-  height: 20px;
+.fancy-rule {
+  height: 10px;
   width: 100%;
   border-style: solid;
   border-color: #d19b3d;
   border-width: 2px 0 0 0;
-  border-radius: 8px; }
+  border-radius: 8px;
+  margin-top: 0px;
+  margin-bottom: 0px; }
 
-.reddish:before {
+.fancy-rule:before {
   display: block;
   content: "";
-  height: 20px;
-  margin-top: -10px;
+  height: 10px;
   border-style: solid;
   border-color: #d19b3d;
   border-width: 0 0 2px 0;
@@ -31,7 +32,8 @@ a:hover {
 .heading {
   background-color: #23282e;
   padding: 5px;
-  border-radius: 10px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   margin: 0; }
 
 h1 {
@@ -43,10 +45,12 @@ h2 {
 
 .bio-container {
   background-color: #2e353d;
-  border-radius: 10px; }
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px; }
 
 p {
-  padding: 10px; }
+  padding: 0;
+  margin: 0; }
 
 .faded {
   position: relative;
@@ -157,7 +161,8 @@ p {
   padding: 1em;
   color: #23282e;
   margin-left: 10px;
-  margin-right: 5%; }
+  margin-right: 5%;
+  border-radius: 10px; }
   .panel .faded {
     color: #23282e; }
 
