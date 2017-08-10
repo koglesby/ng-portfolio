@@ -71,6 +71,7 @@
   line-height: 28px;
   border-bottom: 1px solid #23282e;
   margin-left: 0;
+  padding-left: 20px;
 }
 
 /*For Projects Sub-menu when active*/
@@ -89,15 +90,11 @@
   outline: none;
 }
 
-/*For the '>' symbol in the Sub-menu*/
-.nav-side-menu ul .sub-menu li:before,
-.nav-side-menu li .sub-menu li:before {
-  font-family: FontAwesome;
-  content: "\f105";
-  display: inline-block;
-  padding-left: 10px;
-  padding-right: 10px;
-  vertical-align: middle;
+.cool, .cool:before {
+  position: absolute;
+  top: -4px;
+  left: 4px;
+  font-size: 9px;
 }
 
 /*For the ^ Icon on Projects */

@@ -7,7 +7,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
@@ -20,7 +19,6 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: '', redirectTo: 'about', pathMatch: 'full' },
-  { path: 'contact', component: ContactComponent },
   { path: 'skills-tools', component: SkillsComponent },
   { path: 'not-found', component: PageNotFoundComponent },
   { path: 'projects', component: ProjectsComponent, children: [
@@ -35,7 +33,6 @@ const appRoutes: Routes = [
     AppComponent,
     SidebarComponent,
     AboutComponent,
-    ContactComponent,
     ProjectsComponent,
     SkillsComponent,
     ProjectComponent,

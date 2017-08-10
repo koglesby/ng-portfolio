@@ -23,14 +23,14 @@
           Projects
 
         </a>
-        <i class="{{arrow}}" (click)="onGrowDiv()"
+        <i class="{{arrow}} fa-lg" (click)="onGrowDiv()"
            style="float: right; vertical-align: middle;"></i>
       </li>
       <div id="grow">
         <div class="measuringWrapper">
           <ul class="sub-menu" *ngFor="let proj of projects; let i = index">
             <li routerLink="/projects/{{i}}" routerLinkActive="active"
-                (click)="onNavigate(i)"><a>{{proj.name}}</a></li>
+                (click)="onNavigate(i)"><i class="fa fa-chevron-right cool"></i> {{proj.name}}</li>
           </ul>
         </div>
       </div>
@@ -40,11 +40,7 @@
           Skills & Tools
         </a>
       </li>
-      <!--<li>-->
-        <!--<a class="nav-link" routerLink="/contact" routerLinkActive="active">-->
-          <!--Contact-->
-        <!--</a>-->
-      <!--</li>-->
+
     </ul>
   </div>
 </div>
