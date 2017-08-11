@@ -23,6 +23,8 @@ export class SidebarComponent implements OnInit {
   state = 'collapsed';
   arrow = 'fa fa-chevron-down';
   isActive = '';
+
+  id = 0;
   
   projects: Project[];
   
@@ -36,6 +38,7 @@ export class SidebarComponent implements OnInit {
   ngOnInit() {
     this.projects = this.projectService.getProjects();
     setTimeout(() => this.onGrowDiv(),0);
+    
   }
 
   onGrowDiv() {
@@ -53,6 +56,7 @@ export class SidebarComponent implements OnInit {
 
   onNavigate(index) {
     this.projectService.navigatedProject.next(index);
+    this.id = index;
   }
 
 }

@@ -17,7 +17,7 @@ export class ProjectService {
       ' chess application that enforces the rules of the game. ' +
       'Under the guidance of a senior software engineer, we ' +
       'had weekly Agile team meetings, code reviews and sprint planning.',
-      '../assets/chess.png',
+      '../assets/chess.jpg',
       'https://github.com/8th-Rank-Pawns/chess-app',
       'http://chess-app-8th-rank-pawns.herokuapp.com'
     ),
@@ -27,7 +27,7 @@ export class ProjectService {
       ' features credit card payment capabilities, user role' +
       ' management, complex user interfaces, and advanced' +
       ' database relationships.',
-      '../assets/flixter.png',
+      '../assets/flixter.jpg',
       'https://github.com/koglesby/flixter',
       'http://flixter-kevin-oglesby.herokuapp.com'
     ),
@@ -36,7 +36,7 @@ export class ProjectService {
       'A Yelp clone that integrates with the Google Maps API ' +
       'and includes features like user comments, star ratings, ' +
       'image uploading, and user authentication.',
-      '../assets/nomster.png',
+      '../assets/nomster.jpg',
       'https://github.com/koglesby/nomly',
       'http://nomly-kevin-oglesby.herokuapp.com'
     ),
@@ -62,7 +62,7 @@ export class ProjectService {
       'Test Driven Development',
       'An Instagram clone that was built using industry-standard, test-driven ' +
       'development following numerous red/green/refactor cycles.',
-      '../assets/grammable.png',
+      '../assets/grammable.jpg',
       'https://github.com/koglesby/grammable',
       'http://grammable-kevin-oglesby.herokuapp.com/'
     ),
@@ -88,7 +88,7 @@ export class ProjectService {
       'Ionic App',
       'This project was built using the Ionic framework, and uses firebase, ' +
       'and has been compiled into an apk',
-      '../assets/reciperoost-mobile.jpg',
+      '../assets/reciperoost-mobile.png',
       'https://github.com/koglesby/reciperoost-mobile',
       ''
     ),
