@@ -24,7 +24,9 @@ export class SidebarComponent implements OnInit {
   arrow = 'fa fa-chevron-down';
   isActive = '';
 
-  id = 0;
+  activeState = '';
+
+  id;
   
   projects: Project[];
   
@@ -38,7 +40,12 @@ export class SidebarComponent implements OnInit {
   ngOnInit() {
     this.projects = this.projectService.getProjects();
     setTimeout(() => this.onGrowDiv(),0);
-    
+    this.projectService.projectActivated.subscribe(
+      (id) => {
+        this.id = id;
+        (id < this.projectService.getProjectsLength()) ? this.activeState = 'active' : '';
+      }
+    );
   }
 
   onGrowDiv() {
@@ -56,7 +63,10 @@ export class SidebarComponent implements OnInit {
 
   onNavigate(index) {
     this.projectService.navigatedProject.next(index);
-    this.id = index;
+  }
+
+  onNavigateMain() {
+    this.activeState = '';
   }
 
 }

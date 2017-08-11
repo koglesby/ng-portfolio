@@ -14,14 +14,13 @@
   <div class="menu-list" id="navGrow" [@divState]="state">
     <ul id="menu-content" class="menu-content">
       <li>
-        <a class="nav-link" routerLink="/about" routerLinkActive="active">
+        <a class="nav-link" routerLink="/about" routerLinkActive="active" (click)="onNavigateMain()">
           About
         </a>
       </li>
       <li>
-        <a class="nav-link" routerLink="/projects" (click)="onNavigate(i)" routerLinkActive="active">
+        <a class="nav-link {{activeState}}" routerLink="/projects/{{id}}">
           Projects
-
         </a>
         <i class="{{arrow}} fa-lg" (click)="onGrowDiv()"
            style="float: right; vertical-align: middle;"></i>
@@ -36,7 +35,7 @@
       </div>
 
       <li>
-        <a class="nav-link" routerLink="/skills-tools" routerLinkActive="active">
+        <a class="nav-link" routerLink="/skills-tools" routerLinkActive="active" (click)="onNavigateMain()">
           Skills & Tools
         </a>
       </li>

@@ -112,6 +112,7 @@ export class ProjectComponent implements OnInit, OnDestroy {
       this.router.navigate(['/projects', projId]);
       this.state = 'set';
     }, 160);
+    
   }
   
 }
