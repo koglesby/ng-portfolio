@@ -21,15 +21,13 @@ import { Router } from '@angular/router';
   ]
 })
 export class SidebarComponent implements OnInit {
-  state = 'collapsed';
-  arrow = 'fa fa-chevron-down';
-  isActive = '';
+  state: string = 'collapsed';
+  arrow: string = 'fa fa-chevron-down';
+  isActive: string = '';
+  activeState: string = '';
+  subActive: string = '';
 
-  activeState = '';
-
-  subActive = '';
-
-  id = 0;
+  id: number = 0;
   
   projects: Project[];
   
@@ -47,6 +45,8 @@ export class SidebarComponent implements OnInit {
       (id) => {
         this.id = id;
         (id < this.projectService.getProjectsLength()) ? this.activeState = 'active' : '';
+        this.clearActiveClass();
+        document.getElementById(id.toString()).classList.add('active');
       }
     );
   }
@@ -65,12 +65,13 @@ export class SidebarComponent implements OnInit {
     }
   }
 
-  onNavigate(index, speed) {
+  onNavigate(index: number, speed: string) {
     this.projectService.navigatedProject.next(index);
-    speed == 'slow' ? setTimeout(()=> this.router.navigate(['/projects', index]), 160): this.router.navigate(['/projects', index]);
-
-    this.clearActiveClass();
-    document.getElementById(index.toString()).classList.add('active');
+    if (speed == 'slow') {
+      setTimeout(()=> this.router.navigate(['/projects', index]), 160)
+    } else {
+      this.router.navigate(['/projects', index]);
+    }
   }
 
   onNavigateMain() {
@@ -80,7 +81,7 @@ export class SidebarComponent implements OnInit {
   
   private clearActiveClass() {
     var activeLink = document.querySelector("li.active");
-    activeLink ? activeLink.classList.remove('active') : console.log('foo');
+    activeLink && activeLink.classList.remove('active');
   }
 
 }
