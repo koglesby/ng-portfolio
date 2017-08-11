@@ -71,12 +71,14 @@
   border-bottom: 1px solid #23282e;
   margin-left: 0;
   padding-left: 20px;
+  transition: all 160ms ease;
 }
 
 /*For Projects Sub-menu when active*/
 .nav-side-menu ul .sub-menu li.active,
 .nav-side-menu ul .sub-menu li.active a {
   color: #d19b3d;
+  transition: all 160ms ease;
 }
 
 /*Hover over Sub menu*/
