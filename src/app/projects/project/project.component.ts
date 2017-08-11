@@ -96,7 +96,7 @@ export class ProjectComponent implements OnInit, OnDestroy {
         } else {
           this.state = 'changing-left';
         }
-        setTimeout(() => ( this.state = 'set'), 0)
+        setTimeout(() => ( this.state = 'set'), 160)
       }
     );
   }

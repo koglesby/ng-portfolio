@@ -19,7 +19,7 @@
         </a>
       </li>
       <li>
-        <a class="nav-link {{activeState}}" routerLink="/projects/{{id}}">
+        <a class="nav-link {{activeState}}" (click)="onNavigate(id, 'fast')" >
           Projects
         </a>
         <i class="{{arrow}} fa-lg" (click)="onGrowDiv()"
@@ -28,8 +28,8 @@
       <div id="grow">
         <div class="measuringWrapper">
           <ul class="sub-menu" *ngFor="let proj of projects; let i = index">
-            <li routerLink="/projects/{{i}}" routerLinkActive="active"
-                (click)="onNavigate(i)"><i class="fa fa-chevron-right cool"></i> {{proj.name}}</li>
+            <li class="{{subActive}}" id="{{i}}"
+                (click)="onNavigate(i, 'slow')"><i class="fa fa-chevron-right cool"></i>{{proj.name}}</li>
           </ul>
         </div>
       </div>
