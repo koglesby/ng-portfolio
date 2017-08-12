@@ -22,6 +22,43 @@ export class ProjectService {
       'http://chess-app-8th-rank-pawns.herokuapp.com'
     ),
     new Project(
+      'Single Page Portfolio',
+      "You're looking at this app right now! Whoa, so meta! This app was built from scratch using the Angular 4 framework" +
+      " and features a responsive design which incorporates Angular animations, " +
+      "and makes use of observables and services in order to pass data between components" +
+      " and allow for simple project additions and edits.",
+      '../assets/portfolio.jpg',
+      'https://github.com/koglesby/ng-portfolio',
+      ''
+    ),
+    new Project(
+      'Test Driven Development',
+      'An Instagram clone that was built using industry-standard, test-driven ' +
+      'development following numerous red/green/refactor cycles.',
+      '../assets/grammable.jpg',
+      'https://github.com/koglesby/grammable',
+      'http://grammable-kevin-oglesby.herokuapp.com/'
+    ),
+    new Project(
+      'Angular + Rails',
+      'A freelancing app which combines the Angular front-end framework ' +
+      'with two Rails 5 API apps functioning as a backend. This architecture allows for' +
+      ' automatic updates of page elements without page refresh, while' +
+      ' leveraging the power and flexibility of the Rails.',
+      '../assets/freelance-camp.jpg',
+      'https://github.com/koglesby/freelance-camp',
+      'http://koglesby-freelance-camp.herokuapp.com/home'
+    ),
+    new Project(
+      'Angular 4 App',
+      'A single-page application built using the Angular 4 framework. ' +
+      'Integrated with Firebase to store and retrieve recipe and ' +
+      'shopping list data in real time.',
+      '../assets/reciperoost.jpg',
+      'https://github.com/koglesby/reciperoost',
+      'http://ng-reciperoost-deployment.s3-website-us-west-1.amazonaws.com/'
+    ),
+    new Project(
       'Online Marketplace',
       'A two-sided, video-streaming marketplace platform that' +
       ' features credit card payment capabilities, user role' +
@@ -41,16 +78,7 @@ export class ProjectService {
       'http://nomly-kevin-oglesby.herokuapp.com'
     ),
     new Project(
-      'Quote Generator',
-      'A database-powered quote generator with a mobile-first' +
-      ' design, using the Ruby on Rails framework, HTML, and CSS.' +
-      'Uses Git and GitHub for version control, and launched on Heroku.',
-      '../assets/splurty.png',
-      'https://github.com/koglesby/splurty',
-      'http://splurty-kevin-oglesby.herokuapp.com/'
-    ),
-    new Project(
-      'Single Page App',
+      'Single Page To-do App',
       'This single-page to-do application features a ' +
       'fluid user interface that allows users to rapidly add' +
       ' dynamic content by using JavaScript.',
@@ -59,48 +87,24 @@ export class ProjectService {
       'http://todo-kevin-oglesby.herokuapp.com'
     ),
     new Project(
-      'Test Driven Development',
-      'An Instagram clone that was built using industry-standard, test-driven ' +
-      'development following numerous red/green/refactor cycles.',
-      '../assets/grammable.jpg',
-      'https://github.com/koglesby/grammable',
-      'http://grammable-kevin-oglesby.herokuapp.com/'
-    ),
-    new Project(
-      'Angular 4 App',
-      'A single-page application built using the Angular 4 framework. ' +
-      'Integrated with firebase to store and retrieve recipe and ' +
-      'shopping list data in real time.',
-      '../assets/reciperoost.png',
-      'https://github.com/koglesby/reciperoost',
-      'http://ng-reciperoost-deployment.s3-website-us-west-1.amazonaws.com/'
-    ),
-    new Project(
-      'Microservices',
-      'This project has a front end which was build using the Angular 4 framework' +
-      'and integrates with rails microservices. It is sort of an outline. It uses' +
-      'both client-side and server-side validation',
-      '../assets/freelance-camp.jpg',
-      'https://github.com/koglesby/freelance-camp',
-      'http://koglesby-freelance-camp.herokuapp.com/home'
-    ),
-    new Project(
-      'Ionic App',
-      'This project was built using the Ionic framework, and uses firebase, ' +
-      'and has been compiled into an apk',
-      '../assets/reciperoost-mobile.png',
-      'https://github.com/koglesby/reciperoost-mobile',
-      ''
-    ),
-    new Project(
-      'Single Page Portfolio',
-      "You're looking at this app right now! Whoa, so meta! This app was built from scratch using the Angular 4 framework" +
-      " and incorporates Angular animations, makes use of services in order to pass data to different components, " +
-      "and easily add new projects.",
-      '../assets/portfolio.jpg',
-      'https://github.com/koglesby/ng-portfolio',
-      ''
+      'Quote Generator',
+      'This is the first full Web App that I built. It is a database-powered quote generator with a mobile-first' +
+      ' design, using the Ruby on Rails framework, HTML, and CSS. ' +
+      ' It uses Git and GitHub for version control, and was launched on Heroku.',
+      '../assets/splurty.png',
+      'https://github.com/koglesby/splurty',
+      'http://splurty-kevin-oglesby.herokuapp.com/'
     )
+
+    // new Project(
+    //   'Ionic App',
+    //   'This project was built using the Ionic framework, and uses firebase, ' +
+    //   'and has been compiled into an apk',
+    //   '../assets/reciperoost-mobile.png',
+    //   'https://github.com/koglesby/reciperoost-mobile',
+    //   ''
+    // ),
+
   ];
   
   getProjectsLength() {
