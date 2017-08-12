@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { ProjectService } from '../projects/project.service';
 import { Project } from '../projects/project.model';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs/Rx';
 
 @Component({
   selector: 'app-sidebar',
@@ -20,9 +21,11 @@ import { Router } from '@angular/router';
     ])
   ]
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent implements OnInit, OnDestroy {
   state: string = 'collapsed';
   arrow: string = 'fa fa-chevron-down';
+  projectSubscription: Subscription;
+  
   isActive: string = '';
   activeState: string = '';
   subActive: string = '';
@@ -82,6 +85,10 @@ export class SidebarComponent implements OnInit {
   private clearActiveClass() {
     var activeLink = document.querySelector("li.active");
     activeLink && activeLink.classList.remove('active');
+  }
+  
+  ngOnDestroy() {
+    this.projectSubscription.unsubscribe();
   }
 
 }

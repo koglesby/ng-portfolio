@@ -73,6 +73,7 @@ export class ProjectComponent implements OnInit, OnDestroy {
   project: Project;
   id: number = 0;
   subscription: Subscription;
+  navSubscription: Subscription;
   
   state = 'set';
 
@@ -87,7 +88,7 @@ export class ProjectComponent implements OnInit, OnDestroy {
         this.project = this.projectService.getProject(this.id);
       }
     );
-    this.projectService.navigatedProject.subscribe(
+    this.navSubscription = this.projectService.navigatedProject.subscribe(
       (index) => {
         if (this.id == index || (index == null && this.id == 0)) {
           this.state = 'set'
@@ -103,6 +104,7 @@ export class ProjectComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
+    this.navSubscription.unsubscribe();
   }
 
   onChangeProject(direction: string) {
