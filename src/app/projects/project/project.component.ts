@@ -116,5 +116,10 @@ export class ProjectComponent implements OnInit, OnDestroy {
     }, 160);
     
   }
+
+  loading: boolean = true
+  onLoad() {
+    this.loading = false;
+  }
   
 }
