@@ -78,7 +78,7 @@ export class ProjectService {
       'http://nomly-kevin-oglesby.herokuapp.com'
     ),
     new Project(
-      'Single Page To-do App',
+      'Single Page To-Do App',
       'This single-page to-do application features a ' +
       'fluid user interface that allows users to rapidly add' +
       ' dynamic content by using JavaScript.',
