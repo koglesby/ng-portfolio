@@ -1,32 +1,38 @@
-<h3 [@projectTransition]="state">
-  {{project.name}}
-</h3>
+<div *ngFor="let project of projects; let i = index">
+  <div [hidden]="id != i">
 
-<div [@projectTransition]="state">
-  <i *ngIf="loading" class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
-  <img [hidden]="loading" (load)="onLoad()" src="{{project.imagePath}}" class="app-image">
+    <h3 [@projectTransition]="state">
+      {{project.name}}
+    </h3>
 
-</div>
-<div class="row align-items-center">
-    <div class="chev-left">
-      <i class="fa fa-chevron-left fa-2x" (click)="onChangeProject('back')"></i>
+    <div [@projectTransition]="state">
+      <i *ngIf="loading" class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+      <img [hidden]="loading" (load)="onLoad()" src="{{project.imagePath}}" class="app-image">
+
+    </div>
+    <div class="row align-items-center">
+        <div class="chev-left">
+          <i class="fa fa-chevron-left fa-2x" (click)="onChangeProject('back')"></i>
+        </div>
+
+      <div class="middle">
+        <a href="{{project.sourcePath}}" class="btn">
+          <img class="bottom" src="../assets/github-icon-color.png">
+          <img class="top" src="../assets/github-icon-light.png">
+          view code
+        </a>
+        <a *ngIf="project.prodPath != ''" href="{{project.prodPath}}" class="btn deployed">
+          deployed app
+        </a>
+      </div>
+      <div class="chev-right">
+        <i class="fa fa-chevron-right fa-2x" (click)="onChangeProject('forward')"></i>
+      </div>
     </div>
 
-  <div class="middle">
-    <a href="{{project.sourcePath}}" class="btn">
-      <img class="bottom" src="../assets/github-icon-color.png">
-      <img class="top" src="../assets/github-icon-light.png">
-      view code
-    </a>
-    <a *ngIf="project.prodPath != ''" href="{{project.prodPath}}" class="btn deployed">
-      deployed app
-    </a>
-  </div>
-  <div class="chev-right">
-    <i class="fa fa-chevron-right fa-2x" (click)="onChangeProject('forward')"></i>
+    <p [@projectTransition]="state" style="margin-bottom: 0">
+      {{project.description}}
+    </p>
+
   </div>
 </div>
-
-<p [@projectTransition]="state" style="margin-bottom: 0">
-  {{project.description}}
-</p>

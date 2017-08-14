@@ -70,7 +70,10 @@ import { trigger, state, style, transition, animate, keyframes} from '@angular/a
   ]
 })
 export class ProjectComponent implements OnInit, OnDestroy {
-  project: Project;
+
+  projects: Project[];
+
+  // project: Project;
   id: number = 0;
   subscription: Subscription;
   navSubscription: Subscription;
@@ -80,12 +83,14 @@ export class ProjectComponent implements OnInit, OnDestroy {
   constructor(private projectService: ProjectService, private route: ActivatedRoute, private router: Router) { }
   
   ngOnInit() {
+    this.projects = this.projectService.getProjects();
+
     this.subscription = this.route.params.subscribe(
       (params: Params) => {
         (+params['id'] < this.projectService.getProjectsLength()) ? this.id = +params['id'] : this.router.navigate(['/projects/0']);
         // For redirecting from invalid project id.^^
         this.projectService.projectActivated.next(this.id);
-        this.project = this.projectService.getProject(this.id);
+        // this.project = this.projectService.getProject(this.id);
       }
     );
     this.navSubscription = this.projectService.navigatedProject.subscribe(
