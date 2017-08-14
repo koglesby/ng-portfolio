@@ -79,6 +79,7 @@
 .nav-side-menu ul .sub-menu li.active a {
   color: #d19b3d;
   transition: all 160ms ease;
+  background-color: #020203;
 }
 
 /*Hover over Sub menu*/
@@ -290,10 +291,14 @@
 }
 
 
-@media screen and (max-device-width: 641px){
+@media only screen and (max-device-width: 641px){
   /* some CSS here */
+  .nav-side-menu ul .sub-menu li:hover {
+    background-color: #181c20;
+  }
 
   .nav-side-menu li:hover {
+    border-left: 0;
     background-color: #2e353d;
   }
 
