@@ -18,11 +18,11 @@
           About
         </a>
       </li>
-      <li>
+      <li (click)="onGrowDiv()">
         <a class="nav-link {{activeState}}" (click)="onNavigate(id, 'fast')" >
           Projects
         </a>
-        <i class="{{arrow}} fa-lg" (click)="onGrowDiv()"
+        <i class="{{arrow}} fa-lg"
            style="float: right; vertical-align: middle;"></i>
       </li>
       <div id="grow">

@@ -15,8 +15,8 @@
   line-height: 50px;
   display: block;
   text-align: center;
-  font-size: 14px;
-
+  font-size: 16px;
+  font-weight: 500;
 }
 .nav-side-menu .brand a {
   cursor: pointer;
@@ -67,7 +67,7 @@
 .nav-side-menu ul .sub-menu li {
   background-color: #181c20;
   border: none;
-  line-height: 28px;
+  line-height: 34px;
   border-bottom: 1px solid #23282e;
   margin-left: 0;
   padding-left: 20px;
@@ -93,7 +93,7 @@
 
 .cool, .cool:before {
   position: absolute;
-  top: -4px;
+  top: -2px;
   left: 4px;
   font-size: 9px;
 }
@@ -109,9 +109,9 @@
   width: 20px;
   height: 20px;
 }
-.nav-side-menu li i:hover {
-  color: #d19b3d;
-}
+/*.nav-side-menu li i:hover {*/
+  /*color: #d19b3d;*/
+/*}*/
 
 /*Animating the Main menu items on Hover*/
 .nav-side-menu li:hover {
@@ -195,27 +195,27 @@
   }
 }
 
-@media only screen and (max-device-width: 480px) {
-  .nav-side-menu li:hover {
-    background-color: #2e353d;
-  }
+/*@media only screen and (max-device-width: 480px) {*/
+  /*.nav-side-menu li:hover {*/
+    /*background-color: #2e353d;*/
+  /*}*/
 
-  .nav-side-menu li i:hover {
-    color: #e1ffff;
-  }
-  .nav-side-menu li i:active {
-    color: #d19b3d;
-  }
+  /*.nav-side-menu li i:hover {*/
+    /*color: #e1ffff;*/
+  /*}*/
+  /*.nav-side-menu li i:active {*/
+    /*color: #d19b3d;*/
+  /*}*/
 
-  .nav-side-menu .toggle-btn:hover{
-    background-color: #2e353d;
-  }
+  /*.nav-side-menu .toggle-btn:hover{*/
+    /*background-color: #2e353d;*/
+  /*}*/
 
-  .nav-side-menu .toggle-btn:active {
-    background-color: #e1ffff;
-  }
+  /*.nav-side-menu .toggle-btn:active {*/
+    /*background-color: #e1ffff;*/
+  /*}*/
 
-}
+/*}*/
 /*@media (min-width: 767px) {*/
   /*.nav-side-menu .menu-list .menu-content {*/
     /*display: block;*/
@@ -287,4 +287,212 @@
   -ms-transform: translateY(-15px) rotate(-45deg) translateX(-6px);
   -o-transform: translateY(-15px) rotate(-45deg) translateX(-6px);
   transform: translateY(-15px) rotate(-45deg) translateX(-6px);
+}
+
+/* Portrait and Landscape */
+@media screen
+and (device-width: 320px)
+and (device-height: 640px)
+and (-webkit-device-pixel-ratio: 2) {
+  .nav-side-menu li:hover {
+    background-color: #2e353d;
+  }
+
+  .nav-side-menu li i:hover {
+    color: #e1ffff;
+  }
+
+  .nav-side-menu .toggle-btn:hover{
+    background-color: #2e353d;
+  }
+
+  .nav-side-menu .toggle-btn:active {
+    background-color: #e1ffff;
+  }
+}
+
+/* Portrait */
+@media screen
+and (device-width: 320px)
+and (device-height: 640px)
+and (-webkit-device-pixel-ratio: 2)
+and (orientation: portrait) {
+  .nav-side-menu li:hover {
+    background-color: #2e353d;
+  }
+
+  .nav-side-menu li i:hover {
+    color: #e1ffff;
+  }
+
+  .nav-side-menu .toggle-btn:hover{
+    background-color: #2e353d;
+  }
+
+  .nav-side-menu .toggle-btn:active {
+    background-color: #e1ffff;
+  }
+}
+
+/* Landscape */
+@media screen
+and (device-width: 320px)
+and (device-height: 640px)
+and (-webkit-device-pixel-ratio: 2)
+and (orientation: landscape) {
+  .nav-side-menu li:hover {
+    background-color: #2e353d;
+  }
+
+  .nav-side-menu li i:hover {
+    color: #e1ffff;
+  }
+
+  .nav-side-menu .toggle-btn:hover{
+    background-color: #2e353d;
+  }
+
+  .nav-side-menu .toggle-btn:active {
+    background-color: #e1ffff;
+  }
+}
+
+/* ----------- Galaxy S4 ----------- */
+
+/* Portrait and Landscape */
+@media screen
+and (device-width: 320px)
+and (device-height: 640px)
+and (-webkit-device-pixel-ratio: 3) {
+  .nav-side-menu li:hover {
+    background-color: #2e353d;
+  }
+
+  .nav-side-menu li i:hover {
+    color: #e1ffff;
+  }
+
+  .nav-side-menu .toggle-btn:hover{
+    background-color: #2e353d;
+  }
+
+  .nav-side-menu .toggle-btn:active {
+    background-color: #e1ffff;
+  }
+}
+
+/* Portrait */
+@media screen
+and (device-width: 320px)
+and (device-height: 640px)
+and (-webkit-device-pixel-ratio: 3)
+and (orientation: portrait) {
+  .nav-side-menu li:hover {
+    background-color: #2e353d;
+  }
+
+  .nav-side-menu li i:hover {
+    color: #e1ffff;
+  }
+
+  .nav-side-menu .toggle-btn:hover{
+    background-color: #2e353d;
+  }
+
+  .nav-side-menu .toggle-btn:active {
+    background-color: #e1ffff;
+  }
+}
+
+/* Landscape */
+@media screen
+and (device-width: 320px)
+and (device-height: 640px)
+and (-webkit-device-pixel-ratio: 3)
+and (orientation: landscape) {
+  .nav-side-menu li:hover {
+    background-color: #2e353d;
+  }
+
+  .nav-side-menu li i:hover {
+    color: #e1ffff;
+  }
+
+  .nav-side-menu .toggle-btn:hover{
+    background-color: #2e353d;
+  }
+
+  .nav-side-menu .toggle-btn:active {
+    background-color: #e1ffff;
+  }
+}
+
+/* ----------- Galaxy S5 ----------- */
+
+/* Portrait and Landscape */
+@media screen
+and (device-width: 360px)
+and (device-height: 640px)
+and (-webkit-device-pixel-ratio: 3) {
+  .nav-side-menu li:hover {
+    background-color: #2e353d;
+  }
+
+  .nav-side-menu li i:hover {
+    color: #e1ffff;
+  }
+
+  .nav-side-menu .toggle-btn:hover{
+    background-color: #2e353d;
+  }
+
+  .nav-side-menu .toggle-btn:active {
+    background-color: #e1ffff;
+  }
+}
+
+/* Portrait */
+@media screen
+and (device-width: 360px)
+and (device-height: 640px)
+and (-webkit-device-pixel-ratio: 3)
+and (orientation: portrait) {
+  .nav-side-menu li:hover {
+    background-color: #2e353d;
+  }
+
+  .nav-side-menu li i:hover {
+    color: #e1ffff;
+  }
+
+  .nav-side-menu .toggle-btn:hover{
+    background-color: #2e353d;
+  }
+
+  .nav-side-menu .toggle-btn:active {
+    background-color: #e1ffff;
+  }
+}
+
+/* Landscape */
+@media screen
+and (device-width: 360px)
+and (device-height: 640px)
+and (-webkit-device-pixel-ratio: 3)
+and (orientation: landscape) {
+  .nav-side-menu li:hover {
+  background-color: #2e353d;
+  }
+
+  .nav-side-menu li i:hover {
+  color: #e1ffff;
+  }
+
+  .nav-side-menu .toggle-btn:hover{
+  background-color: #2e353d;
+  }
+
+  .nav-side-menu .toggle-btn:active {
+  background-color: #e1ffff;
+  }
 }

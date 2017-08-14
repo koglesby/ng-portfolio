@@ -2,7 +2,7 @@
 html, body {
   background-color: #4f5b69;
   color: #e1ffff;
-  font-family: Verdana;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 a, a:hover, a:focus {
@@ -12,4 +12,8 @@ a, a:hover, a:focus {
 
 .drop-shade {
   filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.7));
+}
+
+li {
+  font-size: 14px;
 }

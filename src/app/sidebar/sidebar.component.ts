@@ -71,7 +71,7 @@ export class SidebarComponent implements OnInit, OnDestroy {
   onNavigate(index: number, speed: string) {
     this.projectService.navigatedProject.next(index);
     if (speed == 'slow') {
-      setTimeout(()=> this.router.navigate(['/projects', index]), 160)
+      setTimeout(()=> this.router.navigate(['/projects', index]), 30)
     } else {
       this.router.navigate(['/projects', index]);
     }

@@ -22,6 +22,7 @@ p {
 }
 
 .fa {
+  padding: 7px;
   position: relative;
   cursor: pointer;
   top: 2px;
@@ -29,6 +30,14 @@ p {
   /*margin-left: 26%;*/
   /*-webkit-transition-duration: 0.4s; !* Safari *!*/
   /*transition-duration: 0.4s;*/
+}
+
+.fa-chevron-left {
+  padding-right: 10px;
+}
+
+.fa-chevron-right {
+  padding-left: 10px;
 }
 
 .fa:hover {
@@ -51,6 +60,7 @@ p {
   margin: 3px 0;
   /*width: 160px;*/
   padding: 10px 10px 10px 35px;
+  border-radius: 8px;
 }
 
 .deployed {
@@ -90,17 +100,17 @@ a:hover {
 
 .chev-left {
   position: absolute;
-  left: 5%;
+  left: 3%;
 }
 .chev-right {
   position: absolute;
-  right: 5%;
+  right: 3%;
 }
 
 .middle {
   margin: 0 auto;
-  width: 450px;
-  padding: 7px 50px 7px 50px;
+  width: 500px;
+  padding: 7px 54px 7px 54px;
 
   /*align-content: center;*/
 }

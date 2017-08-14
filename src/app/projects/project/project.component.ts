@@ -102,7 +102,7 @@ export class ProjectComponent implements OnInit, OnDestroy {
         } else {
           this.state = 'changing-left';
         }
-        setTimeout(() => ( this.state = 'set'), 160)
+        setTimeout(() => ( this.state = 'set'), 30)
       }
     );
   }
@@ -118,11 +118,11 @@ export class ProjectComponent implements OnInit, OnDestroy {
     setTimeout(() => {
       this.router.navigate(['/projects', projId]);
       this.state = 'set';
-    }, 160);
+    }, 30);
     
   }
 
-  loading: boolean = true
+  loading: boolean = true;
   onLoad() {
     this.loading = false;
   }
