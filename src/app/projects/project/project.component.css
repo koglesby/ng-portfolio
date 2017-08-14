@@ -115,7 +115,7 @@ a:hover {
   /*align-content: center;*/
 }
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 641px) {
   .fa:hover {
     color: #e1ffff;
     -webkit-transition-duration: 0.4s; /* Safari */
