@@ -100,17 +100,17 @@ a:hover {
 
 .chev-left {
   position: absolute;
-  left: 3%;
+  left: 5.5%;
 }
 .chev-right {
   position: absolute;
-  right: 3%;
+  right: 5.5%;
 }
 
 .middle {
   margin: 0 auto;
   width: 500px;
-  padding: 7px 54px 7px 54px;
+  padding: 7px 53px 7px 53px;
 
   /*align-content: center;*/
 }

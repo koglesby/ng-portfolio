@@ -41,6 +41,16 @@ export class SidebarComponent implements OnInit, OnDestroy {
     this.isActive == '' ? this.isActive = 'is-active' : this.isActive = '';
   }
 
+  isTouchDevice() {
+    var el = document.createElement('div');
+      el.setAttribute('ontouchstart', 'return;');
+      if(typeof el.ontouchstart == "function"){
+        console.log(true);
+      }else {
+        console.log(false)
+      }
+  }
+
   ngOnInit() {
     this.projects = this.projectService.getProjects();
     setTimeout(() => this.onGrowDiv(),0);
@@ -52,6 +62,9 @@ export class SidebarComponent implements OnInit, OnDestroy {
         document.getElementById(id.toString()).classList.add('active');
       }
     );
+    this.isTouchDevice();
+
+
   }
 
 

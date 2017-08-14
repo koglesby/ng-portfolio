@@ -290,7 +290,9 @@
 }
 
 
-@media handheld {
+@media screen and (max-device-width: 640px){
+  /* some CSS here */
+
   .nav-side-menu li:hover {
     background-color: #2e353d;
   }
