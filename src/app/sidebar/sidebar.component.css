@@ -197,33 +197,6 @@
   }
 }
 
-/*@media only screen and (max-device-width: 480px) {*/
-  /*.nav-side-menu li:hover {*/
-    /*background-color: #2e353d;*/
-  /*}*/
-
-  /*.nav-side-menu li i:hover {*/
-    /*color: #e1ffff;*/
-  /*}*/
-  /*.nav-side-menu li i:active {*/
-    /*color: #d19b3d;*/
-  /*}*/
-
-  /*.nav-side-menu .toggle-btn:hover{*/
-    /*background-color: #2e353d;*/
-  /*}*/
-
-  /*.nav-side-menu .toggle-btn:active {*/
-    /*background-color: #e1ffff;*/
-  /*}*/
-
-/*}*/
-/*@media (min-width: 767px) {*/
-  /*.nav-side-menu .menu-list .menu-content {*/
-    /*display: block;*/
-  /*}*/
-/*}*/
-
 /*//////////////////////////////*/
 
 /* Hamburger Icon and Animation into Up arrow*/
@@ -293,8 +266,6 @@
 
 
 @media only screen and (max-device-width: 640px){
-  /* some CSS here */
-
 
   .nav-side-menu ul .sub-menu li:hover {
     background-color: #181c20;
