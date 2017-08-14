@@ -121,9 +121,6 @@ a:hover {
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
   }
-  .fa:active {
-    color: #d19b3d;
-  }
 }
 
 

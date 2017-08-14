@@ -176,6 +176,7 @@
     -ms-transition: all 1s ease;
     transition: all 1s ease;
   }
+
   .nav-side-menu .toggle-btn:hover {
     background-color: #4f5b69;
   }
@@ -291,14 +292,20 @@
 }
 
 
-@media only screen and (max-device-width: 641px){
+@media only screen and (max-device-width: 640px){
   /* some CSS here */
+
+
   .nav-side-menu ul .sub-menu li:hover {
     background-color: #181c20;
   }
+  .nav-side-menu ul .sub-menu li.active,
+  .nav-side-menu ul .sub-menu li.active a {
+    background-color: #020203;
+  }
 
   .nav-side-menu li:hover {
-    border-left: 0;
+    border-left: 3px solid #2e353d;
     background-color: #2e353d;
   }
 
@@ -315,14 +322,14 @@
   }
 }
 
-@media only screen and (max-device-height: 641px){
+@media only screen and (max-device-height: 640px){
   /* some CSS here */
   .nav-side-menu ul .sub-menu li:hover {
     background-color: #181c20;
   }
 
   .nav-side-menu li:hover {
-    border-left: 0;
+    border-left: 3px;
     background-color: #2e353d;
   }
 
