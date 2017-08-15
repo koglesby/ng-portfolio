@@ -12,57 +12,47 @@ import { trigger, state, style, transition, animate, keyframes} from '@angular/a
   animations: [
     trigger('projectTransition', [
       state('set', style({transform: 'translateX(0)', opacity: 1})),
-      state('changing-left', style({transform: 'translateX(-600px)', opacity: 0})),
-      state('changing-right', style({transform: 'translateX(600px)', opacity: 0})),
       transition('set => changing-left', animate('160ms ease-in-out', keyframes([
           style({
             transform: 'translateX(0) scaleX(1) scaleY(1)',
-            opacity: 1,
-            offset: 0
+            opacity: 1
           }),
           style({
             transform: 'translateX(-600px) scaleX(0) scaleY(0.75)',
-            opacity: 0,
-            offset: 1
+            opacity: 0
           })
         ]))
       ),
       transition('set => changing-right', animate('160ms ease-in-out', keyframes([
           style({
             transform: 'translateX(0) scaleX(1) scaleY(1)',
-            opacity: 1,
-            offset: 0
+            opacity: 1
           }),
           style({
             transform: 'translateX(600px) scaleX(0) scaleY(0.75)',
-            opacity: 0,
-            offset: 1
+            opacity: 0
           })
         ]))
       ),
       transition('changing-left => set', animate('160ms ease-in-out', keyframes([
         style({
           transform: 'translateX(600px) scaleX(0) scaleY(0.75)',
-          opacity: 0,
-          offset: 0
+          opacity: 0
         }),
         style({
           transform: 'translateX(0) scaleX(1) scaleY(1)',
-          opacity: 1,
-          offset: 1
+          opacity: 1
         })
       ]))
       ),
       transition('changing-right => set', animate('160ms ease-in-out', keyframes([
           style({
             transform: 'translateX(-600px) scaleX(0) scaleY(0.75)',
-            opacity: 0,
-            offset: 0
+            opacity: 0
           }),
           style({
             transform: 'translateX(0) scaleX(1) scaleY(1)',
-            opacity: 1,
-            offset: 1
+            opacity: 1
           })
         ]))
       )
@@ -73,24 +63,26 @@ export class ProjectComponent implements OnInit, OnDestroy {
 
   projects: Project[];
 
-  // project: Project;
   id: number = 0;
   subscription: Subscription;
   navSubscription: Subscription;
-  
   state = 'set';
+
+  loading: boolean = true;
+
+  onLoad() {
+    this.loading = false;
+  }
 
   constructor(private projectService: ProjectService, private route: ActivatedRoute, private router: Router) { }
   
   ngOnInit() {
     this.projects = this.projectService.getProjects();
-
     this.subscription = this.route.params.subscribe(
       (params: Params) => {
         (+params['id'] < this.projectService.getProjectsLength()) ? this.id = +params['id'] : this.router.navigate(['/projects/0']);
         // For redirecting from invalid project id.^^
         this.projectService.projectActivated.next(this.id);
-        // this.project = this.projectService.getProject(this.id);
       }
     );
     this.navSubscription = this.projectService.navigatedProject.subscribe(
@@ -122,9 +114,6 @@ export class ProjectComponent implements OnInit, OnDestroy {
     
   }
 
-  loading: boolean = true;
-  onLoad() {
-    this.loading = false;
-  }
+
   
 }
