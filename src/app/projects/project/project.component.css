@@ -103,20 +103,14 @@ a:hover {
   /*align-content: center;*/
 }
 
-/*@media only screen and (max-device-width: 641px) {*/
-  /*.fa:hover {*/
-    /*color: #e1ffff;*/
-    /*-webkit-transition-duration: 0.4s; !* Safari *!*/
-    /*transition-duration: 0.4s;*/
-  /*}*/
-/*}*/
+@media only screen and (max-device-width: 640px) {
+  .fa:hover {
+    color: #e1ffff;
+  }
+}
 
-
-
-/*h {*/
-  /*color: #d19b3d #23282e #4f5b69 #020203 #181c20;*/
-/*}*/
-/*h2 {*/
-  /*color:  #e1ffff #2e353d;*/
-/*}*/
-
+@media only screen and (max-device-height: 640px) {
+  .fa:hover {
+    color: #e1ffff;
+  }
+}
