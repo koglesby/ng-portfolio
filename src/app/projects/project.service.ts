@@ -50,7 +50,7 @@ export class ProjectService {
       'http://koglesby-freelance-camp.herokuapp.com/home'
     ),
     new Project(
-      'Angular 4 App',
+      'Angular + Firebase',
       'A single-page application built using the Angular 4 framework. ' +
       'Integrated with Firebase to store and retrieve recipe and ' +
       'shopping list data in real time.',
