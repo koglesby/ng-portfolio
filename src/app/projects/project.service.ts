@@ -4,6 +4,9 @@ import { isNullOrUndefined } from 'util';
 import { Subject } from 'rxjs/Rx';
 export class ProjectService {
 
+  projectActivated = new Subject<number>();
+  navigatedProject = new Subject<number>();
+
   // public name: string;
   // public description: string;
   // public imagePath: string;
@@ -32,12 +35,12 @@ export class ProjectService {
       ''
     ),
     new Project(
-      'Test Driven Development',
-      'An Instagram clone that was built using industry-standard, test-driven ' +
-      'development following numerous red/green/refactor cycles.',
-      '../assets/grammable.jpg',
-      'https://github.com/koglesby/grammable',
-      'http://grammable-kevin-oglesby.herokuapp.com/'
+      'MEAN Stack Message Board',
+      'A simple message board app built using the MEAN stack - consisting of the ' +
+      'JavaScript-based tech: MongoDB, Express.js, Angular 4, and Node.js.',
+      '../assets/mean-mess.png',
+      'https://github.com/koglesby/mean-messenger',
+      'http://meanmessenger-env.us-east-1.elasticbeanstalk.com'
     ),
     new Project(
       'Angular + Rails',
@@ -48,6 +51,14 @@ export class ProjectService {
       '../assets/freelance-camp.jpg',
       'https://github.com/koglesby/freelance-camp',
       'http://koglesby-freelance-camp.herokuapp.com/home'
+    ),
+    new Project(
+      'Test Driven Development',
+      'An Instagram clone that was built using industry-standard, test-driven ' +
+      'development following numerous red/green/refactor cycles.',
+      '../assets/grammable.jpg',
+      'https://github.com/koglesby/grammable',
+      'http://grammable-kevin-oglesby.herokuapp.com/'
     ),
     new Project(
       'Angular + Firebase',
@@ -127,7 +138,4 @@ export class ProjectService {
     }
   }
 
-  projectActivated = new Subject<number>();
-  
-  navigatedProject = new Subject<number>();
 }
