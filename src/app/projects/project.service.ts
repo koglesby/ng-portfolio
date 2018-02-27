@@ -25,8 +25,17 @@ export class ProjectService {
       'http://chess-app-8th-rank-pawns.herokuapp.com'
     ),
     new Project(
+      'React + Redux Burger-Builder',
+      'Create custom burgers with automatic price adjustment. Employs a firebase backend with' +
+      'user authentication and forms for contact information. Built using the React library with ' +
+      'highly reusable components and Redux for state management.',
+      '../assets/burgerbuilder.jpg',
+      'https://github.com/koglesby/burger-builder',
+      'https://koglesby-react-burger-builder.firebaseapp.com/'
+    ),
+    new Project(
       'Single Page Portfolio',
-      "You're looking at this app right now! Whoa, so meta! This app was built from scratch using the Angular 4 framework" +
+      "You're looking at this app right now! Whoa! This app was built from scratch using the Angular 4 framework" +
       " and features a responsive design which incorporates Angular animations, " +
       "and makes use of observables and services in order to pass data between components" +
       " and allow for simple project additions and edits.",
