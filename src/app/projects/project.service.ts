@@ -34,8 +34,17 @@ export class ProjectService {
       'https://koglesby-react-burger-builder.firebaseapp.com/'
     ),
     new Project(
+      'React Native Places App',
+      'Built using React Native and Redux, this mobile app makes use of native device features, allowing' +
+      ' users to quickly take a picture or select one from their library to upload and share, and add a location ' +
+      'using the device\'s currrent position or one selected from a map view component.',
+      '../assets/reactnativeplaces.jpg',
+      'https://github.com/koglesby/react-native-places',
+      ''
+    ),
+    new Project(
       'Single Page Portfolio',
-      "You're looking at this app right now! Whoa! This app was built from scratch using the Angular 4 framework" +
+      "You're looking at this app right now! This app was built from scratch using the Angular 4 framework" +
       " and features a responsive design which incorporates Angular animations, " +
       "and makes use of observables and services in order to pass data between components" +
       " and allow for simple project additions and edits.",
@@ -49,10 +58,10 @@ export class ProjectService {
       'JavaScript-based tech: MongoDB, Express.js, Angular 4, and Node.js.',
       '../assets/mean-mess.png',
       'https://github.com/koglesby/mean-messenger',
-      'http://meanmessenger-env.us-east-1.elasticbeanstalk.com'
+      ''
     ),
     new Project(
-      'Angular + Rails',
+      'Angular + Rails Freelancing App',
       'A freelancing app which combines the Angular front-end framework ' +
       'with two Rails 5 API apps functioning as a backend. This architecture allows for' +
       ' automatic updates of page elements without page refresh, while' +
