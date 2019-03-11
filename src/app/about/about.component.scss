@@ -4,11 +4,12 @@
   border-radius: 2%;
 }
 
-.contact a img, .contact a i {
+.contact a img,
+.contact a i {
   position: relative;
   top: -2px;
   height: 20px;
-  margin:5px;
+  margin: 5px;
 }
 
 a:hover {
@@ -52,7 +53,6 @@ h4 {
   margin-bottom: 20px;
 }
 
-
 .bio-container {
   background-color: #2e353d;
   border-bottom-left-radius: 8px;
@@ -65,8 +65,19 @@ p {
   margin-bottom: 5px;
 }
 
-@mixin faded($offset, $blur-radius, $spread-radius)
-{
+$faded-offset: 40px !default;
+$faded-blur-radius: 40px !default;
+$faded-spread-radius: 16px !default;
+
+$faded-narrow-offset: 20px !default;
+$faded-narrow-blur-radius: 20px !default;
+$faded-narrow-spread-radius: 10px !default;
+
+$faded-wide-offset: 80px !default;
+$faded-wide-blur-radius: 80px !default;
+$faded-wide-spread-radius: 28px !default;
+
+@mixin faded($offset, $blur-radius, $spread-radius) {
   &.faded-left:after {
     box-shadow: inset $offset 0 $blur-radius (-$spread-radius);
   }
@@ -84,7 +95,8 @@ p {
   }
 
   &.faded-left.faded-right:after {
-    box-shadow: inset $offset 0 $blur-radius (-$spread-radius), inset (-$offset) 0 $blur-radius (-$spread-radius);
+    box-shadow: inset $offset 0 $blur-radius (-$spread-radius),
+      inset (-$offset) 0 $blur-radius (-$spread-radius);
   }
 
   &.faded-left.faded-top:after {
@@ -100,7 +112,8 @@ p {
   }
 
   &.faded-top.faded-bottom:after {
-    box-shadow: inset 0 $offset $blur-radius (-$spread-radius), inset 0 (-$offset) $blur-radius (-$spread-radius);
+    box-shadow: inset 0 $offset $blur-radius (-$spread-radius),
+      inset 0 (-$offset) $blur-radius (-$spread-radius);
   }
 
   &.faded-left.faded-bottom:after {
@@ -123,25 +136,11 @@ p {
     box-shadow: inset 0 ($offset/2) $blur-radius $spread-radius;
   }
 
-  &.faded-all:after, &.faded-left.faded-top.faded-right.faded-bottom:after {
+  &.faded-all:after,
+  &.faded-left.faded-top.faded-right.faded-bottom:after {
     box-shadow: inset 0 0 $blur-radius $spread-radius;
   }
 }
-
-
-
-
-$faded-offset: 40px !default;
-$faded-blur-radius: 40px !default;
-$faded-spread-radius: 16px !default;
-
-$faded-narrow-offset: 20px !default;
-$faded-narrow-blur-radius: 20px !default;
-$faded-narrow-spread-radius: 10px !default;
-
-$faded-wide-offset: 80px !default;
-$faded-wide-blur-radius: 80px !default;
-$faded-wide-spread-radius: 28px !default;
 
 .faded {
   position: relative;
@@ -149,7 +148,7 @@ $faded-wide-spread-radius: 28px !default;
   color: white;
 
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     display: block;
     top: 0;
@@ -162,30 +161,33 @@ $faded-wide-spread-radius: 28px !default;
   @include faded($faded-offset, $faded-blur-radius, $faded-spread-radius);
 
   &.faded-narrow {
-    @include faded($faded-narrow-offset, $faded-narrow-blur-radius, $faded-narrow-spread-radius);
+    @include faded(
+      $faded-narrow-offset,
+      $faded-narrow-blur-radius,
+      $faded-narrow-spread-radius
+    );
   }
-
   &.faded-wide {
-    @include faded($faded-wide-offset, $faded-wide-blur-radius, $faded-wide-spread-radius);
+    @include faded(
+      $faded-wide-offset,
+      $faded-wide-blur-radius,
+      $faded-wide-spread-radius
+    );
   }
 }
-
 // Colored panel
 .panel {
   background-color: #23282e;
   padding: 1em;
   color: #23282e;
-  margin-left:10px;
+  margin-left: 10px;
   margin-right: 5%;
-  border-radius: 10px;
-  //left: 5%;
-
+  border-radius: 10px; // left: 5%;
   .faded {
     // Use a text color the same as the background colour of the panel will mean the fade effect matches the backround correctly
     color: #23282e;
   }
 }
-
 // Scale images down if they're too large for available space
 img {
   max-width: 100%;

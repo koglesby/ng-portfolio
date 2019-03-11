@@ -3,7 +3,8 @@
   min-width: 170px;
   border-radius: 2%; }
 
-.contact a img, .contact a i {
+.contact a img,
+.contact a i {
   position: relative;
   top: -2px;
   height: 20px;
@@ -61,7 +62,7 @@ p {
   display: inline-block;
   color: white; }
   .faded:after {
-    content: "";
+    content: '';
     position: absolute;
     display: block;
     top: 0;
