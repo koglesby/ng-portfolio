@@ -1,19 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
-html, body {
+html,
+body {
   background-color: #4f5b69;
   color: #e1ffff;
   font-family: 'Ubuntu', sans-serif;
 }
 
-a, a:hover, a:focus {
+a,
+a:hover,
+a:focus {
   color: #e1ffff;
   text-decoration: none;
 }
 
 .drop-shade {
-  filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.7));
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.7));
 }
 
 li {
   font-size: 14px;
+}
+
+.loading {
+  position: fixed;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
