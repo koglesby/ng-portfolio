@@ -18,6 +18,11 @@
           About
         </a>
       </li>
+      <li>
+        <a class="nav-link" routerLink="/skills-tools" routerLinkActive="active" (click)="onNavigateMain()">
+          Skills & Tools
+        </a>
+      </li>
       <li (click)="onGrowDiv()">
         <a class="nav-link {{activeState}}" (click)="onNavigate(id, 'fast')" >
           Projects
@@ -33,13 +38,6 @@
           </ul>
         </div>
       </div>
-
-      <li>
-        <a class="nav-link" routerLink="/skills-tools" routerLinkActive="active" (click)="onNavigateMain()">
-          Skills & Tools
-        </a>
-      </li>
-
     </ul>
   </div>
 </div>

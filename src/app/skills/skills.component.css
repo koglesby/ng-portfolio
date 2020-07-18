@@ -25,9 +25,10 @@ h3 {
   margin-top: 20px;
 }
 
-.row {
-  /*margin-bottom: 10px;*/
-  /*margin-top: 10px;*/
+.skills-title {
+  background-color: #2e353d;
+  border-radius: 5px;
+  padding-bottom: 6px;
 }
 
 img {
@@ -44,7 +45,10 @@ img {
 }
 
 .flex-item {
-  margin: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   font-size: 18px;
   text-align: center;
 }
