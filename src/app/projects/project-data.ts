@@ -37,7 +37,7 @@ export const projectData = [
     'An elegant website mockup with a responsive design, ' +
     'built following BEM Notation and 7-1 Sass architecture, ' +
     'featuring css animations, a custom grid, and a pure CSS Popup.',
-    '../assets/natours.png',
+    '../assets/natours.jpg',
     'https://github.com/koglesby/natours',
     'https://koglesby.github.io/natours/'
   ),
