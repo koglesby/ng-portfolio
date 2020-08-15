@@ -3,7 +3,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 import { ProjectService } from '../projects/project.service';
 import { Project } from '../projects/project.model';
 import { Router } from '@angular/router';
-import { Subscription } from 'rxjs/Rx';
+import { Subscription } from 'rxjs';
 // import 'web-animations-js';
 
 

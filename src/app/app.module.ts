@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -20,11 +20,15 @@ const appRoutes: Routes = [
   { path: '', redirectTo: 'about', pathMatch: 'full' },
   { path: 'skills-tools', component: SkillsComponent },
   { path: 'not-found', component: PageNotFoundComponent },
-  { path: 'projects', component: ProjectsComponent, children: [
-    { path: '', redirectTo: '/projects/0', pathMatch: 'full' },
-    { path: ':id', component: ProjectComponent }
-  ] },
-  { path: '**', redirectTo: '/not-found'}
+  {
+    path: 'projects',
+    component: ProjectsComponent,
+    children: [
+      { path: '', redirectTo: '/projects/0', pathMatch: 'full' },
+      { path: ':id', component: ProjectComponent },
+    ],
+  },
+  { path: '**', redirectTo: '/not-found' },
 ];
 
 @NgModule({
@@ -35,16 +39,16 @@ const appRoutes: Routes = [
     ProjectsComponent,
     SkillsComponent,
     ProjectComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [ProjectService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

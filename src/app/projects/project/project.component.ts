@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ProjectService } from '../project.service';
 import { Project } from '../project.model';
 import { Params, Router, ActivatedRoute } from '@angular/router';
-import { Subscription } from 'rxjs/Rx';
+import { Subscription } from 'rxjs';
 import { trigger, state, style, transition, animate, keyframes} from '@angular/animations';
 
 @Component({

@@ -1,5 +1,5 @@
 import { Project } from './project.model';
-import { Subject } from 'rxjs/Rx';
+import { Subject } from 'rxjs';
 
 import { projectData } from './project-data';
 

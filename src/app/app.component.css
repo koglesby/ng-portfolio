@@ -6,29 +6,28 @@
 }
 
 /*.outer {*/
-  /*display: table;*/
-  /*position: absolute;*/
-  /*height: 100%;*/
+/*display: table;*/
+/*position: absolute;*/
+/*height: 100%;*/
 /*}*/
 
 /*.middle {*/
-  /*display: table-cell;*/
-  /*vertical-align: middle;*/
+/*display: table-cell;*/
+/*vertical-align: middle;*/
 /*}*/
 
 @media (max-width: 768px) {
   /*.outer {*/
-    /*height: 80%;*/
+  /*height: 80%;*/
   /*}*/
   .super {
     padding-top: 15px;
   }
-
 }
 
 @media (min-width: 1024px) {
   .super {
-    right: .5%;
+    right: 0.5%;
   }
 }
 @media (min-width: 1124px) {
@@ -47,5 +46,4 @@
   .super {
     right: 6%;
   }
-
 }

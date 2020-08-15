@@ -1,9 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
 html,
 body {
   background-color: #4f5b69;
   color: hsl(180, 100%, 96%);
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 a,
